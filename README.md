@@ -1,2 +1,2 @@
 # Parx-Pas
-Free Pascal use 3ds GDI
+FreePascal usage of Three-DS::Parx-GDI
