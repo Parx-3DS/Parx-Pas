@@ -29,8 +29,8 @@ copyrights 2016 kenneth dwayne Lee
       var
         transparent : u32;cvar;public;
         ParxBottom : Pu8;cvar;public;
-        screenBottom : Pu8;cvar;public;
-        screenBottom : Pu8;cvar;public;
+        ParxTopLeft : Pu8;cvar;public;
+        ParxTopRight : Pu8;cvar;public;
 
     procedure SetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint; colour:u32);cdecl;external;
 
@@ -40,7 +40,7 @@ copyrights 2016 kenneth dwayne Lee
 
     function GetPix(screen:Pu8,x,y : cint): u32;cdecl;    
 
-    procedure ClearCanvas(screen:Pu8; colour:u32);cdecl;external;
+    procedure ClearParx(screen:Pu8; colour:u32);cdecl;external;
 
     procedure SetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
 
