@@ -28,25 +28,27 @@ copyrights 2016 kenneth dwayne Lee
 
       var
         transparent : u32;cvar;public;
+        ParxBottom : Pu8;cvar;public;
+        screenBottom : Pu8;cvar;public;
         screenBottom : Pu8;cvar;public;
 
-    procedure SetCanvasPixelEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint; colour:u32);cdecl;external;
+    procedure SetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint; colour:u32);cdecl;external;
 
-    function SetCanvasPixel(screen,x,y,colour : longint) : longint;    
+    procedure SetPix(screen:Pu8; x,y,colour: u32);cdecl;    
 
-    function GetCanvasPixelEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint):u32;cdecl;external;
+    function GetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint):u32;cdecl;external;
 
-    function GetCanvasPixel(screen,x,y : longint) : longint;    
+    function GetPix(screen:Pu8,x,y : cint): u32;cdecl;    
 
     procedure ClearCanvas(screen:Pu8; colour:u32);cdecl;external;
 
     procedure SetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
 
-    function SetRecRe(screen,Top,Left,Height,Width,Region : longint) : longint;    
+    procedure SetRecRe(screen:Pu8; Top,Left,Height,Width: cint; Region:Pu8);cdecl;    
 
-    function GetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint; bpp:u16; RamLocal:RamType):^u8;cdecl;external;
+    function GetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint; bpp:u16; RamLocal:RamType):Pu8;cdecl;external;
 
-    function GetRecRe(screen,Top,Left,Height,Width : longint) : longint;    
+    function GetRecRe(screen:Pu8; Top,Left,Height,Width: cint):Pu8; cdecl;    
 
     function CanvasChar(screen:Pu8; c:cchar; x:cint; y:cint; colour:u32):cint;cdecl;external;
 
@@ -60,8 +62,8 @@ copyrights 2016 kenneth dwayne Lee
 
     procedure CircleFill(screen:Pu8; xCen:cint; yCen:cint; radius:cint; colour:u32);cdecl;external;
 
-    procedure Ellipse(screen: Pu8; xctr: cint; yctr: cint; majaxis: cint; minaxis: cint; rotnrad: cint; u32: colour);external;
+    procedure Ellipse(screen: Pu8; xctr: cint; yctr: cint; majaxis: cint; minaxis: cint; rotnrad: cint; u32: colour);cdecl;external;
 
-    procedure Circle(screen: Pu8; cx: cint; cy: cint; radius: cint; u32: colour);
+    procedure Circle(screen: Pu8; cx: cint; cy: cint; radius: cint; u32: colour);cdecl;
 
 kdl
