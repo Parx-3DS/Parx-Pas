@@ -1,8 +1,8 @@
 copyrights 2016 kenneth dwayne lee
 
-    function SetPix(screen,x,y,colour : longint) : longint;
+    procedure SetPix(screen,x,y,colour : longint);
     begin
-      SetPix:=SetPixEx(screen,3,240,x,y,colour);
+      SetPixEx(screen,3,240,x,y,colour);
     end;
 
     function GetPix(screen,x,y : longint) : longint;
@@ -10,7 +10,7 @@ copyrights 2016 kenneth dwayne lee
       GetPixel:=GetPixEx(screen,3,240,x,y);
     end;
 
-    function SetRecRe(screen,Top,Left,Height,Width,Region : longint) : longint;
+    procedure SetRecRe(screen,Top,Left,Height,Width,Region : longint);
     begin
       SetRecRe:=SetRecEx(screen,Top,Left,Height,Width,Region,1,linear);
     end;
