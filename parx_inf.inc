@@ -1,7 +1,23 @@
-copyrights 2016 kenneth dwayne Lee 
+//copyrights 2016 kenneth dwayne Lee 
 
   Type
-     Pu8 = ^u8;
+     u8 = cuint8;
+     pu8 = ^u8;
+     u16 = cuint16;
+     pu16 = ^u16;
+     u32 = cuint32;
+     pu32 = ^u32;
+     u64 = cuint64;
+     pu64 = ^u64;
+
+     s8 = cint8;
+     s16 = cint16;
+     s32 = cint32;
+     ps32 = ^s32;
+     s64 = cint64;
+     ps64 = ^s64;
+
+     bool= boolean;
 
     imagebuff = record
         width : u16;
@@ -34,11 +50,11 @@ copyrights 2016 kenneth dwayne Lee
 
     procedure SetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint; colour:u32);cdecl;external;
 
-    procedure SetPix(screen:Pu8; x,y,colour: u32);cdecl;    
+    procedure SetPix(screen:Pu8; x,y: cint; colour: u32);cdecl;    
 
     function GetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint):u32;cdecl;external;
 
-    function GetPix(screen:Pu8,x,y : cint): u32;cdecl;    
+    function GetPix(screen:Pu8; x,y : cint):u32 ;cdecl;    
 
     procedure ClearParx(screen:Pu8; colour:u32);cdecl;external;
 
@@ -50,20 +66,20 @@ copyrights 2016 kenneth dwayne Lee
 
     function GetRecRe(screen:Pu8; Top,Left,Height,Width: cint):Pu8; cdecl;    
 
-    function CanvasChar(screen:Pu8; c:cchar; x:cint; y:cint; colour:u32):cint;cdecl;external;
+    function CanvasChar(screen:Pu8; c:char; x:cint; y:cint; colour:u32):cint;cdecl;external;
 
-    function CanvasString(screen:Pu8; _string:pcchar; x:cint; y:cint; colour:u32):cint;cdecl;external;
+    function CanvasString(screen:Pu8; _string:pchar; x:cint; y:cint; colour:u32):cint;cdecl;external;
 
     procedure line(screen:Pu8; x0:cint; y0:cint; x1:cint; y1:cint; colour:u32);cdecl;external;
 
     procedure box(screen:Pu8; x:cint; y:cint; w:cint; h:cint; colour:u32);cdecl;external;
 
-    procedure poly(screen:Pu8; argv:Ppcint; argc:cint; colour:u32);cdecl;external;
+    procedure poly(screen:Pu8; argv:pcint; argc:cint; colour:u32);cdecl;external;
 
     procedure CircleFill(screen:Pu8; xCen:cint; yCen:cint; radius:cint; colour:u32);cdecl;external;
 
-    procedure Ellipse(screen: Pu8; xctr: cint; yctr: cint; majaxis: cint; minaxis: cint; rotnrad: cint; u32: colour);cdecl;external;
+    procedure Ellipse(screen: Pu8; xctr: cint; yctr: cint; majaxis: cint; minaxis: cint; rotnrad: cint; colour: u32);cdecl;external;
 
-    procedure Circle(screen: Pu8; cx: cint; cy: cint; radius: cint; u32: colour);cdecl;
+    procedure Circle(screen: Pu8; cx: cint; cy: cint; radius: cint; colour:u32);cdecl;
 
-kdl
+//kdl
