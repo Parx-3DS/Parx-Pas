@@ -1,21 +1,21 @@
 copyrights 2016 kenneth dwayne lee
 
-    procedure SetPix(screen,x,y,colour : longint);
+    procedure SetPix(screen: Pu8; x,y: cint; colour : u32);
     begin
       SetPixEx(screen,3,240,x,y,colour);
     end;
 
-    function GetPix(screen,x,y : longint) : longint;
+    function GetPix(screen: Pu8; x,y: cint): u32;
     begin
       GetPixel:=GetPixEx(screen,3,240,x,y);
     end;
 
-    procedure SetRecRe(screen,Top,Left,Height,Width,Region : longint);
+    procedure SetRecRe(screen: Pu8; Top,Left,Height,Width: cint; Region: Pu8);
     begin
-      SetRecRe:=SetRecEx(screen,Top,Left,Height,Width,Region,1,linear);
+      SetRecEx(screen,Top,Left,Height,Width,Region,1,linear);
     end;
 
-    function GetRecRe(screen,Top,Left,Height,Width : longint) : longint;
+    function GetRecRe(screen: Pu8; Top,Left,Height,Width: cint) : longint;
     begin
       GetRecRe:=GetRecEx(screen,Top,Left,Height,Width,3,linear);
     end;
