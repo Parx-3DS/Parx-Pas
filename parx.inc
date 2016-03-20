@@ -1,13 +1,13 @@
 copyrights 2016 kenneth dwayne lee
 
-    function SetCanvasPixel(screen,x,y,colour : longint) : longint;
+    function SetPix(screen,x,y,colour : longint) : longint;
     begin
-      SetCanvasPixel:=SetCanvasPixelEx(screen,3,240,x,y,colour);
+      SetPix:=SetPixEx(screen,3,240,x,y,colour);
     end;
 
-    function GetCanvasPixel(screen,x,y : longint) : longint;
+    function GetPix(screen,x,y : longint) : longint;
     begin
-      GetCanvasPixel:=GetCanvasPixelEx(screen,3,240,x,y);
+      GetPixel:=GetPixEx(screen,3,240,x,y);
     end;
 
     function SetRecRe(screen,Top,Left,Height,Width,Region : longint) : longint;
