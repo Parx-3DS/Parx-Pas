@@ -1,5 +1,5 @@
 # Parx-Pas FPC usage of Three-DS::Parx-3DS
-if FPC Natives are restless, there is a demos/samples for SALE! Co: Author & Pioneer  
+if FPC Natives are restless, there is demos/samples for SALE! Co: Author & Pioneer  
 
 ##The, Southern Canadien Heritage Dictionary :defines: "Pioneer"
 ###As a person who is among the first
