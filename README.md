@@ -1,3 +1,24 @@
+Any software works derive &or that make use of MUST include "web search quries" listed!
+I'll retract these web search quries after some of these persons charged with assalt & etc...
+
+on yahoo -->
+tcpip-proxy
+over the air usb hdtv tuner
+voice over internet protocall
+very small aperture satellite
+
+& on google -->
+tcpip-proxy
+very small aperture satellite
+voice over internet protocall
+over the air usb hdtv tuner
+
+& last: ++ what is use of a rental? would you like me to solicit every last shit-head at the court house with this info -->
+https://www.mern.gouv.qc.ca/territoire/droit/droit-tarification.jsp
+http://www.ontario.ca/page/crown-land 
+
+end of notice!!
+
 # Parx-Pas FPC usage of Three-DS::Parx-3DS
 if FPC Natives are restless, there is demos/samples for SALE! Co: [Author & Pioneer](http://forum.lazarus.freepascal.org/index.php?action=profile;area=showposts;u=56552)  
 
