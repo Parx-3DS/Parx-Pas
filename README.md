@@ -1,4 +1,4 @@
-# Parx-Pas FreePascal usage of Three-DS::Parx-3DS
+# Parx-Pas FPC usage of Three-DS::Parx-3DS
 if FPC Natives are restless, there is a demos/samples for SALE! Co: Author & Pioneer  
 
 ##The, Southern Canadien Heritage Dictionary :defines: "Pioneer"
