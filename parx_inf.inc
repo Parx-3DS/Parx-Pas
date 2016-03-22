@@ -48,38 +48,38 @@
         ParxTopLeft : Pu8;cvar;public;
         ParxTopRight : Pu8;cvar;public;
 
-    procedure SetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint; colour:u32);cdecl;external;
+    procedure SetPixEx(screen:Pu8; bpp:u16; h,x,y:integer; colour:u32);cdecl;external;
 
-    procedure SetPix(screen:Pu8; x,y: cint; colour: u32);cdecl;    
+    procedure SetPix(screen:Pu8; x,y: integer; colour: u32);cdecl;    
 
-    function GetPixEx(screen:Pu8; bpp:u16; h:cint; x:cint; y:cint):u32;cdecl;external;
+    function GetPixEx(screen:Pu8; bpp:u16; h,x,y:integer):u32;cdecl;external;
 
-    function GetPix(screen:Pu8; x,y : cint):u32 ;cdecl;    
+    function GetPix(screen:Pu8; x,y : integer):u32 ;cdecl;    
 
     procedure ClearParx(screen:Pu8; colour:u32);cdecl;external;
 
-    procedure SetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
+    procedure SetRecEx(screen:Pu8; Top,Left,Height,Width: integer;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
 
-    procedure SetRecRe(screen:Pu8; Top,Left,Height,Width: cint; Region:Pu8);cdecl;    
+    procedure SetRecRe(screen:Pu8; Top,Left,Height,Width: integer; Region:Pu8);cdecl;    
 
-    function GetRecEx(screen:Pu8; Top:cint; Left:cint; Height:cint; Width:cint; bpp:u16; RamLocal:RamType):Pu8;cdecl;external;
+    function GetRecEx(screen:Pu8; Top,Left,Height,Width: integer; bpp:u16; RamLocal:RamType):Pu8;cdecl;external;
 
-    function GetRecRe(screen:Pu8; Top,Left,Height,Width: cint):Pu8; cdecl;    
+    function GetRecRe(screen:Pu8; Top,Left,Height,Width: integer):Pu8; cdecl;    
 
-    function CanvasChar(screen:Pu8; c:char; x:cint; y:cint; colour:u32):cint;cdecl;external;
+    function CanvasChar(screen:Pu8; c:char; x,y:integer; colour:u32):cint;cdecl;external;
 
-    function CanvasString(screen:Pu8; _string:pchar; x:cint; y:cint; colour:u32):cint;cdecl;external;
+    function CanvasString(screen:Pu8; _string:pchar; x,y:integer; colour:u32):cint;cdecl;external;
 
-    procedure line(screen:Pu8; x0:cint; y0:cint; x1:cint; y1:cint; colour:u32);cdecl;external;
+    procedure line(screen:Pu8; x0,y0,x1,y1:integer; colour:u32);cdecl;external;
 
-    procedure box(screen:Pu8; x:cint; y:cint; w:cint; h:cint; colour:u32);cdecl;external;
+    procedure box(screen:Pu8; x,y,w,h: integer; colour:u32);cdecl;external;
 
     procedure poly(screen:Pu8; argv:pcint; argc:cint; colour:u32);cdecl;external;
 
-    procedure CircleFill(screen:Pu8; xCen:cint; yCen:cint; radius:cint; colour:u32);cdecl;external;
+    procedure CircleFill(screen:Pu8; xCen,yCen,radius:integer; colour:u32);cdecl;external;
 
-    procedure Ellipse(screen: Pu8; xctr: cint; yctr: cint; majaxis: cint; minaxis: cint; rotnrad: cint; colour: u32);cdecl;external;
+    procedure Ellipse(screen: Pu8; xctr,yctr,majaxis,minaxis,rotnrad: integer; colour: u32);cdecl;external;
 
-    procedure Circle(screen: Pu8; cx: cint; cy: cint; radius: cint; colour:u32);cdecl;
+    procedure Circle(screen: Pu8; cx,cy,radius: integer; colour:u32);cdecl;
 
 //kdl
