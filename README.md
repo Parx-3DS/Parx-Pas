@@ -27,8 +27,8 @@ if FPC Natives are restless, there is demos/samples for SALE! Co: [Author & Pion
 ###As a person who is among the first
 ####a. to explore or settle a new country or area.
 ####b. research and develop a new area of knowledge or activity.
-###1.  Eg. "the pioneers of the Wild West" :synonyms:	settler, colonist, colonizer, frontiersman, frontierswoman, explorer, trailblazer, bushwhacker
-###2.  Eg. "an aviation pioneer" :synonyms:	developer, innovator, instigate, trailblazer, groundbreaker, spearhead, institute, establish, found, founder, be the founding father/mother of, originate, set in motion, create, architect, creator
+###1.  Eg. "the pioneers of the Wild West" :synonyms:	settler, colonist, colonizer, frontiers man/woman, explorer, trailblazer, bushwhacker
+###2.  Eg. "an aviation pioneer" :synonyms:	developer, innovator, instigate, groundbreaker, spearhead, institute, establish, found, founder, be the founding father/mother of, originate, set in motion, create, architect, creator
 ###verb: pioneer; 3rd person present: pioneers; past tense: pioneered; past participle: pioneered; gerund or present participle: pioneering
   
 May I,  digress with: R&D Live on Radio-Freedom
