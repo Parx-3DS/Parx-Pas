@@ -20,7 +20,7 @@ http://www.ontario.ca/page/crown-land
 
 end of notice!!
 
-## Parx-Pas (Lady Zürich) and it's FPC usage of Three-DS::Parx-3DS ->
+## Parx-Pas (Lady Zürich) and it's FPC usage of Three-DS::Parx-3DS
 if FPC Natives are restless, there is demos/samples for SALE! Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus.freepascal.org/index.php?action=profile;area=showposts;u=56552)  
 
 ##The, Southern Canadien Heritage Dictionary :defines: "Pioneer"
