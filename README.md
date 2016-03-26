@@ -2,6 +2,9 @@
 Any software works derive &or that make use of MUST include "web search quries" listed!  
 I'll retract these web search quries after some of these persons charged with assalt & etc...
 
+# Parx-Pas (Lady Zürich 1.0)  
+##Three-DS, Computers "Parx-3DS" GDI/Canvas & freepascal proofs
+
 on yahoo -->  
 [tcpip-proxy](https://ca.search.yahoo.com/search;_ylt=A0LEV2NMYKhUEg0AvuzrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANtSW9qNGMwcVJyeUtVWUNyOEtWbEpBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzExBHF1ZXJ5A3RjcGlwIHByb3h5BHRfc3RtcAMxNDIwMzIwODcy?p=tcpip+proxy&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
 [over the air usb hdtv tuner](https://ca.search.yahoo.com/search;_ylt=AwrBTvtnYKhU25AAigjrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANXRHNfNWRrZVE2R2F6eEVpNk9TMjFBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzE0BHF1ZXJ5A3VzYiBoZHR2IHR1bmVyBHRfc3RtcAMxNDIwMzIwODk3?p=usb+hdtv+tuner&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
@@ -20,7 +23,6 @@ http://www.ontario.ca/page/crown-land
 
 end of notice!!
 
-## Parx-Pas (Lady Zürich) and it's FPC usage of Three-DS::Parx-3DS
 if FPC Natives are restless, there is demos/samples for SALE! Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus.freepascal.org/index.php?action=profile;area=showposts;u=56552)  
 
 ##The, Southern Canadien Heritage Dictionary :defines: "Pioneer"
