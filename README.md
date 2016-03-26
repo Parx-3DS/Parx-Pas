@@ -4,7 +4,7 @@ I'll retract these web search quries after some of these persons charged with as
 
 # Parx-Pas (Lady Zürich 1.0)  
 ##Three-DS, Computers "Parx-3DS" GDI/Canvas freepascal public stubs 
-##& AS LEGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO "DESKS" aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
+##& AS LEGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO "FreePascal GDI/Canvas of the 3ds DESK!" aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ##In short I, require prior consent
 
 on yahoo -->  
