@@ -4,7 +4,7 @@ I'll retract these web search quries after some of these persons charged with as
 
 # Parx-Pas (Lady Zürich 1.0)  
 ##Three-DS, Computers "Parx-3DS" GDI/Canvas freepascal public stubs 
-##& AS LEAGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO A " DESK/DESQUE " &OR (IN GAMES FOR APROCHE TOO NINTENDO CORP.) 
+##& AS LEAGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO A " DESK/DESQUE " &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 
 on yahoo -->  
 [tcpip-proxy](https://ca.search.yahoo.com/search;_ylt=A0LEV2NMYKhUEg0AvuzrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANtSW9qNGMwcVJyeUtVWUNyOEtWbEpBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzExBHF1ZXJ5A3RjcGlwIHByb3h5BHRfc3RtcAMxNDIwMzIwODcy?p=tcpip+proxy&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
