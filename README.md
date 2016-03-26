@@ -4,19 +4,8 @@ I'll retract these web search quries after some of these persons charged with as
 
 # Parx-Pas (Lady Zürich 1.0)  
 ##Three-DS, Computers "Parx-3DS" GDI/Canvas freepascal public stubs 
-##& AS LEGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO A "DESK aka skinning of bureau/réception/pupitre/caisse" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
-
-le 
-office, desk, bureau, study, writing desk, agency
-la 
-reception, receipt, desk, function, landing, welcome
-le 
-desk, music stand, reading desk
-la 
-fund, box, case, crate, checkout, desk
-le 
-department, county, division, branch, service, desk
-la 
+##& AS LEGAL PROOF OF MY GENERAL CLAIMS PROVIDED TO "DESKS" aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
+##In short I, require prior consent
 
 on yahoo -->  
 [tcpip-proxy](https://ca.search.yahoo.com/search;_ylt=A0LEV2NMYKhUEg0AvuzrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANtSW9qNGMwcVJyeUtVWUNyOEtWbEpBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzExBHF1ZXJ5A3RjcGlwIHByb3h5BHRfc3RtcAMxNDIwMzIwODcy?p=tcpip+proxy&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
