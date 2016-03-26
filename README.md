@@ -4,7 +4,7 @@ I'll retract these web search quries after some of these persons charged with as
 
 # Parx-Pas (Lady Zürich 1.0)  
 ##Three-DS, Computers "Parx-3DS" GDI/Canvas freepascal public stubs 
-##& AS LEGAL PROOF OF MY GENERAL CLAIMS TO "FreePascal use", & this "GDI Canvas" portions used in or on any 3ds computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
+##& AS LEGAL PROOF OF MY GENERAL CLAIMS TO "FreePascal use on", & this "GDI Canvas" portions used in or on any 3ds computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ##In short I, require prior consent! in support of this valent team 
 ##not to be take as intimadation, more so to help &or aid U in Pascal or this GDI Canvas, Or "DESK thaat jobs & gates, nontendo have forgot or shun or rebuked & bricked". get engine listed teamleader! Lot's are Rooting for U ever day, push your ideas on the "Three-DS, Computer's Desk" we togther enter in to a commercial product so please enjoy!    
 
