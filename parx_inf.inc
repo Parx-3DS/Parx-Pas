@@ -18,6 +18,14 @@
      ps64 = ^s64;
 
      bool= boolean;
+     
+ //pilford -->https://github.com/kennyd-lee/ctru-pas/blob/master/3ds/services/gsp.inc      
+     GSP_FramebufferFormats = (GSP_RGBA8_OES := 0,
+				GSP_BGR8_OES := 1,
+       GSP_RGB565_OES := 2,
+				GSP_RGB5_A1_OES := 3, 
+				GSP_RGBA4_OES := 4);
+
 
     imagebuff = record
         width : u16;
@@ -27,7 +35,7 @@
         used : bool;
       end;
 
-    RamType = (generic := 0,linear := 1,vram := 2);
+    RamType = (linear := 0, vram:= 1, mappable:= 2);
 
     const
       RED = $FFFF0000;      
@@ -82,4 +90,20 @@
 
     procedure Circle(screen: Pu8; cx,cy,radius: integer; colour:u32);cdecl;
 
+    function palletformat(FormatIndex:u8):GSPGPU_FramebufferFormats;cdecl;external;
+
+    function bytes_per_pixel(format:GSPGPU_FramebufferFormats):u32;cdecl;external;
+    
+    procedure rgb_to_pixel(dst:Pu8; src:Pu8; format:GSPGPU_FramebufferFormats);cdecl;external;
+
+    procedure pixel_to_rgba(dst:Pu8; src:Pu8; format:GSPGPU_FramebufferFormats);cdecl;external;
+
+//(Lady Zurtch) v1.3 log 
+//add GSP_FramebufferFormats for lib use 
+//append PalletFormats & 
+//Github::mtheall use of pallet context handling of  
+//bytes_per_pixel, rgb_to_pixel, pixel_to_rgba  
+
+
 //kdl
+
