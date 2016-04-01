@@ -1,4 +1,5 @@
 //copyrights 2016 kenneth dwayne Lee 
+//see  https://github.com/Parx-3DS/Parx-GDI/blob/master/change.log
 
   Type
      u8 = cuint8;
@@ -98,12 +99,4 @@
 
     procedure pixel_to_rgba(dst:Pu8; src:Pu8; format:GSPGPU_FramebufferFormats);cdecl;external;
 
-//(Lady Zurtch) v1.3 log 
-//add GSP_FramebufferFormats for lib use 
-//append PalletFormats & 
-//Github::mtheall use of pallet context handling of  
-//bytes_per_pixel, rgb_to_pixel, pixel_to_rgba  
-
-
 //kdl
-
