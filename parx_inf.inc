@@ -36,7 +36,7 @@
         used : bool;
       end;
 
-    RamType = (linear := 0, vram:= 1, mappable:= 2);
+    RamType = (linear := 0, vram:= 1, mappable:= 2, savage:= 3);
 
     const
       RED = $FFFF0000;      
