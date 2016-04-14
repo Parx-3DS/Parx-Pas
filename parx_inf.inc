@@ -1,5 +1,4 @@
 //copyrights 2016 kenneth dwayne Lee 
-//see  https://github.com/Parx-3DS/Parx-GDI/blob/master/change.log
 
   Type
      u8 = cuint8;
@@ -19,14 +18,6 @@
      ps64 = ^s64;
 
      bool= boolean;
-     
- //pilford -->https://github.com/kennyd-lee/ctru-pas/blob/master/3ds/services/gsp.inc      
-     GSP_FramebufferFormats = (GSP_RGBA8_OES := 0,
-				GSP_BGR8_OES := 1,
-       GSP_RGB565_OES := 2,
-				GSP_RGB5_A1_OES := 3, 
-				GSP_RGBA4_OES := 4);
-
 
     imagebuff = record
         width : u16;
@@ -36,7 +27,8 @@
         used : bool;
       end;
 
-    RamType = (linear := 0, vram:= 1, mappable:= 2, savage:= 3);
+    RamType = (generic := 0,linear := 1,vram := 2);
+    ParxLCD = (P_L := 0, P_B := 1, P_R := 2);
 
     const
       RED = $FFFF0000;      
@@ -57,46 +49,27 @@
         ParxTopLeft : Pu8;cvar;public;
         ParxTopRight : Pu8;cvar;public;
 
+    function MaxWidth(screen:Pu8):cint;cdecl;external;
+    function RefParx(LCD: ParxLCD):Pu8;cdecl;external;
+    procedure ClrParx(screen:Pu8; colour:u32);cdecl;external;
+
     procedure SetPixEx(screen:Pu8; bpp:u16; h,x,y:integer; colour:u32);cdecl;external;
-
     procedure SetPix(screen:Pu8; x,y: integer; colour: u32);cdecl;    
-
     function GetPixEx(screen:Pu8; bpp:u16; h,x,y:integer):u32;cdecl;external;
-
     function GetPix(screen:Pu8; x,y : integer):u32 ;cdecl;    
-
-    procedure ClearParx(screen:Pu8; colour:u32);cdecl;external;
-
     procedure SetRecEx(screen:Pu8; Top,Left,Height,Width: integer;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
-
     procedure SetRecRe(screen:Pu8; Top,Left,Height,Width: integer; Region:Pu8);cdecl;    
-
     function GetRecEx(screen:Pu8; Top,Left,Height,Width: integer; bpp:u16; RamLocal:RamType):Pu8;cdecl;external;
-
     function GetRecRe(screen:Pu8; Top,Left,Height,Width: integer):Pu8; cdecl;    
 
     function CanvasChar(screen:Pu8; c:char; x,y:integer; colour:u32):cint;cdecl;external;
-
     function CanvasString(screen:Pu8; _string:pchar; x,y:integer; colour:u32):cint;cdecl;external;
 
     procedure line(screen:Pu8; x0,y0,x1,y1:integer; colour:u32);cdecl;external;
-
     procedure box(screen:Pu8; x,y,w,h: integer; colour:u32);cdecl;external;
-
     procedure poly(screen:Pu8; argv:pcint; argc:cint; colour:u32);cdecl;external;
-
     procedure CircleFill(screen:Pu8; xCen,yCen,radius:integer; colour:u32);cdecl;external;
-
     procedure Ellipse(screen: Pu8; xctr,yctr,majaxis,minaxis,rotnrad: integer; colour: u32);cdecl;external;
-
     procedure Circle(screen: Pu8; cx,cy,radius: integer; colour:u32);cdecl;
-
-    function palletformat(FormatIndex:u8):GSPGPU_FramebufferFormats;cdecl;external;
-
-    function bytes_per_pixel(format:GSPGPU_FramebufferFormats):u32;cdecl;external;
-    
-    procedure rgb_to_pixel(dst:Pu8; src:Pu8; format:GSPGPU_FramebufferFormats);cdecl;external;
-
-    procedure pixel_to_rgba(dst:Pu8; src:Pu8; format:GSPGPU_FramebufferFormats);cdecl;external;
 
 //kdl
