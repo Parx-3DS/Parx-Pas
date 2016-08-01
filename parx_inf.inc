@@ -28,7 +28,6 @@
       end;
 
     RamType = (generic := 0,linear := 1,vram := 2);
-    ParxLCD = (P_L := 0, P_B := 1, P_R := 2);
 
     const
       RED = $FFFF0000;      
@@ -45,31 +44,44 @@
 
       var
         transparent : u32;cvar;public;
-        ParxBottom : Pu8;cvar;public;
-        ParxTopLeft : Pu8;cvar;public;
-        ParxTopRight : Pu8;cvar;public;
-
-    function MaxWidth(screen:Pu8):cint;cdecl;external;
-    function RefParx(LCD: ParxLCD):Pu8;cdecl;external;
-    procedure ClrParx(screen:Pu8; colour:u32);cdecl;external;
+        ParxBot : Pu8;cvar;public;
+        ParxLeft : Pu8;cvar;public;
+        ParxRight : Pu8;cvar;public;
 
     procedure SetPixEx(screen:Pu8; bpp:u16; h,x,y:integer; colour:u32);cdecl;external;
+
     procedure SetPix(screen:Pu8; x,y: integer; colour: u32);cdecl;    
+
     function GetPixEx(screen:Pu8; bpp:u16; h,x,y:integer):u32;cdecl;external;
+
     function GetPix(screen:Pu8; x,y : integer):u32 ;cdecl;    
+
+    procedure ClrParx(screen:Pu8; colour:u32);cdecl;external;
+
     procedure SetRecEx(screen:Pu8; Top,Left,Height,Width: integer;  Region:Pu8; CleanUp:bool; RamLocal:RamType);cdecl;external;
+
     procedure SetRecRe(screen:Pu8; Top,Left,Height,Width: integer; Region:Pu8);cdecl;    
+
     function GetRecEx(screen:Pu8; Top,Left,Height,Width: integer; bpp:u16; RamLocal:RamType):Pu8;cdecl;external;
+
     function GetRecRe(screen:Pu8; Top,Left,Height,Width: integer):Pu8; cdecl;    
 
     function CanvasChar(screen:Pu8; c:char; x,y:integer; colour:u32):cint;cdecl;external;
+
     function CanvasString(screen:Pu8; _string:pchar; x,y:integer; colour:u32):cint;cdecl;external;
 
     procedure line(screen:Pu8; x0,y0,x1,y1:integer; colour:u32);cdecl;external;
+
     procedure box(screen:Pu8; x,y,w,h: integer; colour:u32);cdecl;external;
+
     procedure poly(screen:Pu8; argv:pcint; argc:cint; colour:u32);cdecl;external;
+
     procedure CircleFill(screen:Pu8; xCen,yCen,radius:integer; colour:u32);cdecl;external;
+
     procedure Ellipse(screen: Pu8; xctr,yctr,majaxis,minaxis,rotnrad: integer; colour: u32);cdecl;external;
+
     procedure Circle(screen: Pu8; cx,cy,radius: integer; colour:u32);cdecl;
+
+    procedure DebugTo(screen:Pu8; x,y:integer; colour:u32; const str: pchar; args: array of const);cdecl;external;
 
 //kdl
