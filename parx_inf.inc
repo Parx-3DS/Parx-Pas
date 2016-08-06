@@ -81,7 +81,8 @@
     procedure Ellipse(screen: Pu8; xctr,yctr,majaxis,minaxis,rotnrad: integer; colour: u32);cdecl;external;
 
     procedure Circle(screen: Pu8; cx,cy,radius: integer; colour:u32);cdecl;
-
+  
+  //printf info --> http://www.freepascal.org/docs-html/ref/refsu70.html#x181-20300014.4.6
     procedure DebugTo(screen:Pu8; x,y:integer; colour:u32; const str: pchar; args: array of const);cdecl;external;
 
 //kdl
