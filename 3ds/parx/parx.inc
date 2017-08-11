@@ -54,8 +54,8 @@ end;
 
 procedure InitBufDub(colour: u32); stdcall;
 begin
-//  gfxSetDoubleBuffering(GFX_TOP,true);
-//  gfxSetDoubleBuffering(GFX_BOTTOM,true);
+  gfxSetDoubleBuffering(GFX_TOP,true);
+  gfxSetDoubleBuffering(GFX_BOTTOM,true);
   BufDubSub(colour,0);
   BufDubSub(colour,1);
 end;
