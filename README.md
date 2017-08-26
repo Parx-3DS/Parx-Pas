@@ -28,7 +28,7 @@ http://www.ontario.ca/page/crown-land
 
 end of notice!!
 
-if pascal Natives are restless, there is demos/samples Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus.freepascal.org/index.php/topic,37857.0.html)  
+if pascal Natives are restless, there is demos/samples Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus-ide.org/index.php/topic,38071.0.html)  
 
 ## The, Southern Canadien Heritage Dictionary :defines: "Pioneer"  
 ### As a person who is among the first  
@@ -39,6 +39,6 @@ if pascal Natives are restless, there is demos/samples Co: [Author](https://gith
 ### verb: pioneer; 3rd person present: pioneers; past tense: pioneered; past participle: pioneered; gerund or present participle: pioneering  
   
 May I,  digress with: R&D Live on [Radio-Freedom](https://github.com/Three-DS/Radio-Freedom)  
-Is your 3DS Nintendo's "GDI - Canvas" in [C](https://github.com/smealum) & [Pascal](http://forum.lazarus.freepascal.org/index.php/topic,37857.0.html) three-way?   
+Is your 3DS Nintendo's "GDI - Canvas" in [C](https://github.com/smealum) & [Pascal](https://github.com/kennyd-lee/ctru-pas) three-way?   
 
 Get more info --> [Parx](https://www.facebook.com/Parx-1735214770048259) for is hire, some just dabble, proliteriots  [nabble](http://free-pascal-lazarus.989080.n3.nabble.com/Three-DS-Parx-GDI-it-s-big-enuff-for-a-quot-shoebox-quot-fits-more-in-quot-cupboard-quot-tc4047731.html)
