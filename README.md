@@ -28,7 +28,7 @@ http://www.ontario.ca/page/crown-land
 
 end of notice!!
 
-if pascal Natives are restless, there is demos/samples Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus-ide.org/index.php/topic,38071.0.html)  
+if pascal Natives are restless, there is demos/samples Co: [Author](https://github.com/kennyd-lee) & [Pioneer](http://forum.lazarus.freepascal.org/index.php/topic,38084.0.html)  
 
 ## The, Southern Canadien Heritage Dictionary :defines: "Pioneer"  
 ### As a person who is among the first  
