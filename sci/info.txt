@@ -1,2 +1,0 @@
-integration & differentiation 
-of the nintendo 2DS & 3DS LCD's in Pascal
