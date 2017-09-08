@@ -11,14 +11,14 @@ PTopMapLED= ^TopMapLED;
 BotMapLED= array[0..319,0..239,0..2] of u8; // y,x,c
 PBotMapLED= ^BotMapLED;
 
-RGBTop= array[0..319,0..239] of TRGB; //240×400
+RGBTop= array[0..319,0..239] of TBGR; //240×400
 PRGBTop= ^RGBTop;
 
-RGBBot= array[0..319,0..239] of TRGB; //240×320
+RGBBot= array[0..319,0..239] of TBGR; //240×320
 PRGBBot= ^RGBBot;
 
-procedure TopMap(colour: TRGB; y: u16; x: u16; screen:Pu8);stdcall; public name 'TopMap';
-procedure BotMap(colour: TRGB; y: u16; x: u16; screen:Pu8);stdcall; public name 'BotMap';
+procedure TopMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'TopMap';
+procedure BotMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'BotMap';
  {$endif 3dsintf}
 
 
