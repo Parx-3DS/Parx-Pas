@@ -6,7 +6,7 @@
 
 {$define Trap}
 // x,y zero @ bottom in RPN
-procedure {$i LCD3DS.inc}(colour: TRGB; y: u16; x: u16; screen:Pu8);stdcall;
+procedure {$i LCD3DS.inc}(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall;
 {$undef Trap}
 VAR	
   mvid : {$i LCD3DS.inc};// PRGBTop; //PTopMapLED; // absolute screen;
