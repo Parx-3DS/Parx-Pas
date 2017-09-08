@@ -6,7 +6,7 @@
 
 {$define Trap}
 // x,y zero @ top of bottom screen
-procedure {$i LCD3DS.inc}(screen:Pu8; x: u16; y: u16;colour: TRGB);stdcall;
+procedure {$i LCD3DS.inc}(screen:Pu8; x: u16; y: u16;colour: TBGR);stdcall;
 {$undef Trap}
 VAR	
   mvid : {$i LCD3DS.inc}; // absolute screen;
