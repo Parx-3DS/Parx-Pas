@@ -10,20 +10,20 @@
 
 #include <3ds.h>
 
-typedef struct TRGB
+typedef struct TBGR
 {
    u8   b;
    u8   g;
    u8   r;
-} TRGB;
+} TBGR;
 
 //Non-Alpha use, faster than our stock GDI functions presented in c   
-void * PSetPix(u8* screen, int x, int y, TRGB colour);external;
-void * BSetPix(u8* screen, int x, int y, TRGB colour);external;
+void * PSetPix(u8* screen, int x, int y, TBGR colour);external;
+void * BSetPix(u8* screen, int x, int y, TBGR colour);external;
 
 //& these in less cpu cycles used, out proform PSetPix && BSetPix in the above  
-void * GFXPix(TRGB colour, int y, int x, u8* screen);external;
-void * GFXPixB(TRGB colour, int y, int x, u8* screen);external;
+void * GFXPix(TBGR colour, int y, int x, u8* screen);external;
+void * GFXPixB(TBGR colour, int y, int x, u8* screen);external;
 
 //R&D jacker be nimble; "Canadian Oil, Gaz & that disaster never happend" think your slick? 
 //kdl 
