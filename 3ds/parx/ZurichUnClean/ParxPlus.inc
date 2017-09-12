@@ -3,6 +3,8 @@
 // Copyright (c) 2017 PhD. Kenneth Dwayne Lee
 // all rights reserved.
 //
+//I present too U 
+//Lady Zurich v 1.6 (the unclean)
 
 {$ifdef 3dsintf} //mapped sold as in sci &or ++ in libs
 TopMapLED= array[0..399,0..239,0..2] of u8; 
@@ -17,8 +19,8 @@ PRGBTop= ^RGBTop;
 RGBBot= array[0..319,0..239] of TBGR; //240×320
 PRGBBot= ^RGBBot;
 
-procedure TopMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'TopMap';
-procedure BotMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'BotMap';
+procedure TopMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'GFXPix';
+procedure BotMap(colour: TBGR; y: u16; x: u16; screen:Pu8);stdcall; public name 'GFXPixB';
  {$endif 3dsintf}
 
 

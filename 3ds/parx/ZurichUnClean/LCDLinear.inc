@@ -3,6 +3,8 @@
 // Copyright (c) 2017 PhD. Kenneth Dwayne Lee
 // all rights reserved.
 //
+//I present too U 
+//Lady Zurich v 1.6 (the unclean)
 
 {$define Trap}
 // x,y zero @ top of bottom screen
