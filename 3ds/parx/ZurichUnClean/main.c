@@ -1,5 +1,5 @@
 //the witch, warlock burning & pilgrammige hour Presents
-//Bow on box stollen from U bi the insain, like a sexlife without cite, sent nor taste 
+//Bow on box stollen from U bi the severely insane, like a sexlife without cite, sent nor taste 
 
 //So what's Twisting Sister?
 //& your going to burn in .. 
