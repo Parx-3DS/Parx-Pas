@@ -1,0 +1,5 @@
+//KDL
+{$ifdef TopLinear}{$ifdef Trap}TopLCD{$else}{$ifdef ScBin} PBIN24Topl {$endif} {$ifdef ScOct} POCT24Topl {$endif} {$ifdef ScHex} PHEX24Topl {$endif} {$ifdef ScDec}PDEC24Topl{$endif} {$ifdef ScBool}PBoolTopl{$endif}{$endif}{$endif}
+{$ifdef BotLinear}{$ifdef Trap}BotLCD{$else}{$ifdef ScBin} PBIN24Botl {$endif} {$ifdef ScOct} POCT24Botl {$endif} {$ifdef ScHex} PHEX24Botl {$endif}{$ifdef ScDec}PDEC24Botl {$endif} {$ifdef ScBool}PBoolBotl {$endif}{$endif}{$endif}
+{$ifdef TopMapped}{$ifdef Trap}TopMap{$else}{$ifdef ScBin} PBIN24Top {$endif} {$ifdef ScOct} POCT24Top {$endif} {$ifdef ScHex} PHEX24Top {$endif} {$ifdef ScDec}PDEC24Top {$endif} {$ifdef ScBool}PBoolTop {$endif}{$endif}{$endif}
+{$ifdef BotMapLED}{$ifdef Trap}BotMap{$else}{$ifdef ScBin} PBIN24Bot {$endif} {$ifdef ScOct} POCT24Bot {$endif} {$ifdef ScHex} PHEX24Bot {$endif} {$ifdef ScDec}PDEC24Bot {$endif} {$ifdef ScBool}PBoolBot {$endif}{$endif}{$endif}
