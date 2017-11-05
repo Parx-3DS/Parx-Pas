@@ -1,0 +1,14 @@
+{$define Trap}
+NSTL{$i PIXelView.inc} = array[0..96000] of {$i PIXelView.inc}; //240×400
+PNSTL{$i PIXelView.inc} = ^ NSTL{$i PIXelView.inc};
+NSBL{$i PIXelView.inc}= array[0..76800] of {$i PIXelView.inc}; //240×320
+PNSBL{$i PIXelView.inc} = ^ NSBL{$i PIXelView.inc};
+
+{$i PIXelView.inc}NST = array[0..399,0..239] of {$i PIXelView.inc}; //240×400
+{$i PIXelView.inc}PNST = ^ {$i PIXelView.inc}NST;
+{$i PIXelView.inc}NSB = array[0..319,0..239] of {$i PIXelView.inc}; //240×320
+{$i PIXelView.inc}PNSB = ^ {$i PIXelView.inc}NSB;
+{$undef Trap}
+//Due too ? Endding & or Leading Tab Space chars in macro subtiution (Due to issue with that Bug / Error !) 
+//KDL managed a work around to irrotate for both (B & T) of (Linear & Mapped) 
+//& alot the 2DS .. 3DS visual thresholds [0 .. {i 96000 76800 399,0..239 319,0..239}] & lean PIXelView.inc while suffixing the  
