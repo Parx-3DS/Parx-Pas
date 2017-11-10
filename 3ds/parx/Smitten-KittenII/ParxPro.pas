@@ -65,23 +65,11 @@ end;
   6 : (Bytes: Byte24); 
  end; 
 
-{$i buffrun.inc}
+{.$i buffrun.inc}
 
-//VRAM Map
-var 
-
-        ParxLeft1 : PHEX24Topl absolute $1E6000;
-        ParxRight1 : PHEX24Topl absolute $22C800;
-        ParxBot1 : PHEX24Botl absolute $48F000;
-                
-        ParxLeft2 : HEX24Top absolute $273000;
-        ParxRight2 : HEX24Top absolute $2B9800;
-        ParxBot2 : PHEX24Bot absolute $48F800;
-        
-        
-        ParxL1 : Pu8 absolute $22C501; // $2FE or 766 bytes upto $22C7FF
-        ParxR1 : Pu8 absolute $272D01; // $2FE or 766 bytes upto $2B97FF
-        ParxB1 : Pu8 absolute $4C7401; //$3FE or 1022 bytes upto $4C77FF?
+{$define ScBGR}
+{.$i Buf24.inc}
+{$undef ScBGR}
 
 procedure PSetPix(screen:Pu8; x: u16; y: u16;colour: TBGR);stdcall; public name 'PSetPix';
 
@@ -113,7 +101,7 @@ procedure BotMap(colour: BoolBit; y: u16; x: u16; screen:Pu8);stdcall; overload;
 {$define ColVertLine}
 
 {$define ScHex}
-{$i ParxPro.inc}
+{.$i ParxPro.inc}
 {$undef ScHex}
 
 {$define ScBool}
@@ -125,7 +113,7 @@ procedure BotMap(colour: BoolBit; y: u16; x: u16; screen:Pu8);stdcall; overload;
 {$undef ScDec}
 
 {$define ScBGR}
-{.$i ParxPro.inc}
+{$i ParxPro.inc}
 {$undef ScBGR}
 
 {$define ScBin}
@@ -156,29 +144,33 @@ PTopMapLED= ^TopMapLED;
 BotMapLED= array[0..319,0..239,0..2] of u8; // y,x,c @ lengths
 PBotMapLED= ^BotMapLED;
 
-//  BGR 
-// BOOL HEX DEC OCT BIN  ... 24bits ?
-{
-BoolTopL= array[0..96000] of BoolBit; //240×400
-PBoolTopL= ^BoolTopL;
-BoolTop= array[0..399,0..239] of BoolBit; //240×400
-PBoolTop= ^BoolTop;
+//
+BGRTopl= array[0..96000] of TBGR; //240×400
+PBGRTopl= ^BGRTopl;
+BGRBotl= array[0..76800] of TBGR; //240×320
+PBGRBotl= ^BGRBotl;
 
-BoolBotL= array[0..76800] of BoolBit; //240×320
-PBoolBotL= ^BoolBotL;
-BoolBot= array[0..319,0..239] of BoolBit; //240×320
-PBoolBot= ^BoolBot;
+BGRTop= array[0..399,0..239] of TBGR; //240×400
+PBGRTop= ^BGRTop;
+BGRBot= array[0..319,0..239] of TBGR; //240×320
+PBGRBot= ^BGRBot;
 
-HexTopL= array[0..96000] of HEX; //240×400
-PHexTopL= ^HexTopL;
-HexTop= array[0..399,0..239] of HEX; //240×400
-PHexTop= ^HexTop;
+//VRAM Map
+var 
 
-HexBotL= array[0..76800] of HEX; //240×320
-PHexBotL= ^HexBotL;
-HexBot= array[0..319,0..239] of HEX; //240×320
-PHexBot= ^HexBot;
-}
+        ParxLeft1 : PTopRawLinear absolute $1E6000;
+        ParxRight1 : PTopRawLinear absolute $22C800;
+        ParxBot1 : PBotRawLinear absolute $48F000;
+                
+        ParxLeft2 : TopMapLED absolute $273000;
+        ParxRight2 : TopMapLED absolute $2B9800;
+        ParxBot2 : BotMapLED absolute $48F800;
+        
+        
+        ParxL1 : Pu8 absolute $22C501; // $2FE or 766 bytes upto $22C7FF
+        ParxR1 : Pu8 absolute $272D01; // $2FE or 766 bytes upto $2B97FF
+        ParxB1 : Pu8 absolute $4C7401; //$3FE or 1022 bytes upto $4C77FF?
+
 
 function CopyRight: PChar; stdcall;
 begin
@@ -263,14 +255,14 @@ END;
 //
 procedure Topfill2;stdcall;
 Var
-  x,y: integer;
+  x,y,c: integer;
 BEGIN
         for x :=  0 to 399 do 
         for y :=  0 to 239 do
-//        for c :=  0 to 2 do 
+        for c :=  0 to 2 do 
        	begin
-	        ParxLeft2[x,y]:= $FFFFFF;
-                ParxRight2[x,y]:= $FFFFFF;
+	        ParxLeft2[x,y,c]:= $FF;
+                ParxRight2[x,y,c]:= $FF;
         end;
 
 END;
@@ -295,19 +287,19 @@ END;
 // x,y zero @ top screen 
 procedure PSetPix(screen:Pu8; x: u16; y: u16;colour: TBGR);stdcall;
 VAR	
-  mvid : PBGRbotL; // PTopRawLinear; // absolute screen;
+  mvid : PBotRawLinear; // absolute screen;
   v:u32;
 BEGIN
-  mvid:= PBGRBotL(screen);
+  mvid:= PBotRawLinear(screen);
   y := 239-y;
   v:= (y+x*240)*3;
-  mvid^[v]:= colour //.r;
- // mvid^[v+1]:= colour.g;
- // mvid^[v+2]:= colour.b;
+  mvid^[v]:= colour.r;
+  mvid^[v+1]:= colour.g;
+  mvid^[v+2]:= colour.b;
 END;
 
 // x,y zero @ bottom corner sold as in sci &or ++ in libs
-// out proform PSetPix with less CPU cycles 
+// out proform SetGFXPix with less CPU cycles ?
 procedure SetGFXPix(screen:Pu8; x: u16; y: u16;colour: TBGR);stdcall; 
 VAR	
   mvid : PTopMapLED; // PBGRTop absolute screen;
@@ -329,22 +321,24 @@ BEGIN
   mvid:= PTopRawLinear(screen);
   y := 239-y;
   v:= (y+x*240)*3;
-  mvid^[v]:=   c.BGR.b;
+  mvid^[v]:=  c.BGR.b;
   mvid^[v+1]:= c.BGR.g;
   mvid^[v+2]:= c.BGR.r;
 END;
 
 procedure SetGFXPix(screen:Pu8; x: u16; y: u16;colour: BoolBit);stdcall; overload; //& make a C call 
 VAR	
-  mvid : PBoolTopL; // PTopRawLinear; // absolute screen;
+  c: TripExt;
+  mvid : PTopRawLinear; // PTopRawLinear; // absolute screen;
   v:u32;
 BEGIN
-  mvid:= PBoolTopL(screen);
+  c.Bools := colour;
+  mvid:= PTopRawLinear(screen);
   y := 239-y;
   v:= (y+x*240)*3;
-  mvid^[v]:= colour //.r;
- // mvid^[v+1]:= colour.g;
- // mvid^[v+2]:= colour.b;
+  mvid^[v]:=  c.BGR.b;
+  mvid^[v+1]:= c.BGR.g;
+  mvid^[v+2]:= c.BGR.r;
 END;
 
 //
@@ -365,7 +359,7 @@ END;
 {$undef ScOct}
 
 {$define ScBGR}
-{.$i DiCa24.inc}
+{$i DiCa24.inc}
 {$undef ScBGR}
 
 //here @ the local 
