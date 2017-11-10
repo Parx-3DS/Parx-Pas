@@ -1,0 +1,10 @@
+
+{$i PIXelView.inc}TopL= array[0..96000] of {$i PIXelView.inc}; //240×400
+P{$i PIXelView.inc}TopL= ^{$i PIXelView.inc}TopL;
+{$i PIXelView.inc}Top= array[0..399,0..239] of {$i PIXelView.inc}; //240×400
+P{$i PIXelView.inc}Top= ^{$i PIXelView.inc}Top;
+
+{$i PIXelView.inc}BotL= array[0..76800] of {$i PIXelView.inc}; //240×320
+P{$i PIXelView.inc}BotL= ^{$i PIXelView.inc}BotL;
+{$i PIXelView.inc}Bot= array[0..319,0..239] of {$i PIXelView.inc}; //240×320
+P{$i PIXelView.inc}Bot= ^{$i PIXelView.inc}Bot;
