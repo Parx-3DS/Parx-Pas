@@ -24,7 +24,7 @@ BEGIN
   c. {$i PIXelView.inc} := colour;
   mvid:= {$i LCD3DS.inc}(screen); 
   y := 239-y;
-  v:= (y+x*240)* {$i ZeroBase.inc} ; 
+  v:= (y+x*240)*{$ifdef Quad}4{$else}3{$endif Quad}; 
   mvid^[v]:=  c.Bytes[0];
   mvid^[v+1]:= c.Bytes[1];//n.g;
   mvid^[v+2]:= c.Bytes[2]; //n.r; 
