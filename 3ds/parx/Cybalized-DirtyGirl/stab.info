@@ -1,0 +1,20 @@
+ an object orient without class 
+ a functional work in progress 
+setpix L/R/B refined speed test 
+& elaborate get pixel Top, Botttom Mapped & Linear 
+
+Main.c:L#205  if (k<320) PSetPixT(ParxRight,k,l, GetPixB(k,l));
+
+Main.c:L#110 
+{
+  SetPixL(k,l,rgb); //TopLCD
+  SetPixR(k,l,rgb);
+  if (k<320) SetPixB(k,l,rgb); //BotLCD
+}
+Vs.
+Main.c:L#220
+{
+  PSetPixT(ParxRight,k,l, rgb); //TopLCD
+  PSetPixT(ParxLeft,k,l, rgb);
+  if (k<320) PSetPixB(ParxBot,k,l, rgb); //BotLCD
+}
