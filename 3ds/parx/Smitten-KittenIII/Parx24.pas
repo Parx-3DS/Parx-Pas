@@ -40,8 +40,9 @@ PBGRBot= ^BGRBot;
 
 procedure Topfill1(); stdcall; public name 'Topfill1';
 procedure Topfill2(); stdcall; public name 'Topfill2';
-function PGetPix(x: word; y: word): TBGR;stdcall; public name 'PGetPix';
-procedure PSetPix(screen:PByte; x: word; y: word;colour: TBGR);stdcall; public name 'PSetPix';
+function GetPixB(x: word; y: word): TBGR;stdcall; public name 'GetPixB';
+procedure PSetPixB(screen:PByte; x: word; y: word;colour: TBGR);stdcall; public name 'PSetPixB';
+procedure PSetPixT(screen:PByte; x: word; y: word;colour: TBGR);stdcall; public name 'PSetPixT';
 
 procedure HexTopfill(screen:PByte);stdcall; public name 'HexTopfill';
 procedure SetGFXPix(screen:PByte; x: word; y: word;colour: TBGR);stdcall; overload; //public name 'SetGFXPix';
@@ -72,6 +73,14 @@ type
 
 {$i BufferDef.inc}
 
+{$define ParxGrid}
+{$define TopMapped}
+{.$define BotMapped} //comment out for PBotRawLinear usage
+  {$include gfx.inc} 
+{.$undef BotMapped}
+{$undef TopMapped}
+{$undef ParxGrid}
+
 var                 
         ParxL1 : PByte absolute $22C501; // $2FE or 766 bytes upto $22C7FF
         ParxR1 : PByte absolute $272D01; // $2FE or 766 bytes upto $2B97FF
@@ -79,24 +88,22 @@ var
 
 {$i GFXMethodTable.inc}
 
-// 
-function PGetPix(x: word; y: word): TBGR;stdcall;
+//lets play, pick a hole  
+function GetPixB(x: word; y: word): TBGR;stdcall;
 VAR	
-  mvid : PTopRawLinear; // absolute screen;
   v:longint;
   c: TBGR;
 BEGIN
-//  mvid:= PTopRawLinear(ParxRight1);
   y := 239-y;
   v:= (y+x*240)*3;
-  c.r:= mvid^[v];
-  c.g:= mvid^[v+1];
-  c.b:= mvid^[v+2];
-  PGetPix:= c;
+  c.b:= gfxBottomFramebuffers[BuffIndex]^[v];
+  c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
+  c.r:= gfxBottomFramebuffers[BuffIndex]^[v+2];
+  GetPixB:= c;
 END;
 
 // x,y zero @ top screen 
-procedure PSetPix(screen:PByte; x: word; y: word;colour: TBGR);stdcall;
+procedure PSetPixB(screen:PByte; x: word; y: word;colour: TBGR);stdcall;
 VAR	
   mvid : PBotRawLinear; // absolute screen;
   v:longint;
@@ -104,9 +111,22 @@ BEGIN
   mvid:= PBotRawLinear(screen);
   y := 239-y;
   v:= (y+x*240)*3;
-  mvid^[v]:= colour.r;
+  mvid^[v]:= colour.b;
   mvid^[v+1]:= colour.g;
-  mvid^[v+2]:= colour.b;
+  mvid^[v+2]:= colour.r;
+END;
+
+procedure PSetPixT(screen:PByte; x: word; y: word;colour: TBGR);stdcall;
+VAR	
+  mvid : PTopRawLinear; // absolute screen;
+  v:longint;
+BEGIN
+  mvid:= PTopRawLinear(screen);
+  y := 239-y;
+  v:= (y+x*240)*3;
+  mvid^[v]:= colour.b;
+  mvid^[v+1]:= colour.g;
+  mvid^[v+2]:= colour.r;
 END;
 
 
@@ -226,6 +246,30 @@ BEGIN
   mvid^[v]:=  c.n.b;
   mvid^[v+1]:= c.n.g;
   mvid^[v+2]:= c.n.r;
+END;
+
+//untested etching buffers grids L/R/B, I'm not in love with these means of   
+procedure SetPixL(x: word; y: word;colour: TBGR);stdcall; 
+BEGIN
+  gfxTopLeftFramebuffers[BuffIndex]^[x,y]:= BYTE24(colour)
+END;
+
+// 
+procedure SetPixR(x: word; y: word;colour: TBGR);stdcall; 
+BEGIN
+  gfxTopRightFramebuffers[BuffIndex]^[x,y]:= BYTE24(colour)
+END;
+
+//assert define ln 77  PBotRawLinear Vs. PBotMapLED ?
+procedure SetPixB(x: word; y: word;colour: TBGR);stdcall; 
+var
+  v:longint;
+BEGIN
+  y := 239-y;
+  v:= (y+x*240)*3;
+  gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
+  gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
+  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
 END;
 
 end.

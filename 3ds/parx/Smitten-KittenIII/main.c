@@ -9,7 +9,7 @@
 
 char * CopyRight ();external;
 void * TestPattern ();external;
-
+void * RefreshBuffer ();external;
 
 void * InitBufSingle(u32 colour);external;
 
@@ -21,10 +21,11 @@ void * PasBotfill(u8* screen);external;
 void * Topfill1;external;
 void * Topfill2;external;
 
-void * PSetPix(u8* screen, int x, int y, TBGR colour);external;
+void * PSetPixB(u8* screen, int x, int y, TBGR colour);external;
+void * PSetPixT(u8* screen, int x, int y, TBGR colour);external;
 void * PSetPix1(u8* screen, int x, int y, TBGR colour);external;
 
-TBGR PGetPix(int y, int x);external;
+TBGR GetPixB(int y, int x);external;
 
 //void * TopLCD(u8* screen, int x, int y, TRGB colour);external;
 //void * BotLCD(u8* screen, int x, int y, TRGB colour);external;
@@ -174,14 +175,13 @@ int main()
                         for (k=0;k<400;k++)
                           for (l=0;l<240;l++)
 {
-  if (k<320) PSetPix(ParxBot,k,l, PGetPix(k,l));
+  if (k<320) PSetPixT(ParxRight,k,l, GetPixB(k,l));
 } 
 
 			}
 
                 if(kDown & KEY_DDOWN)
                         {	
-                             //   SetTopFramebuffers(0);  
 time= osGetTime();
 			
 			rgb.r= 0xCC;
@@ -191,9 +191,9 @@ time= osGetTime();
                         for (k=0;k<400;k++)
                           for (l=0;l<240;l++)
 {
-  TopLCD(ParxRight,k,l, rgb);
-  TopLCD(ParxLeft,k,l, rgb);
-  if (k<320) BotLCD(ParxBot,k,l, rgb);
+  PSetPixT(ParxRight,k,l, rgb); //TopLCD
+  PSetPixT(ParxLeft,k,l, rgb);
+  if (k<320) PSetPixB(ParxBot,k,l, rgb); //BotLCD
 }
 
 time = osGetTime() - time; 
@@ -256,8 +256,9 @@ CanvasString(ParxBot, str, 10,10, GREEN);
 //		gspWaitForEvent(GSPGPU_EVENT_VBlank0, false);
 
 		// Flush and swap framebuffers
-		gfxFlushBuffers();
-		gfxSwapBuffers();
+	//	gfxFlushBuffers();
+	//	gfxSwapBuffers();
+        	RefreshBuffer();
 		//Wait for VBlank
 		gspWaitForVBlank();
 	}

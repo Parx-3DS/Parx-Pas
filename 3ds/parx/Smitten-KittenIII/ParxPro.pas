@@ -25,8 +25,6 @@ uses ctypes;
 
 {$linklib libctru}
 
-{$include gfx.inc}
-
 procedure TestPattern(); stdcall; public name 'TestPattern';
 function CopyRight: PChar; stdcall; public name 'CopyRight';
 
@@ -34,6 +32,7 @@ function CopyRight: PChar; stdcall; public name 'CopyRight';
 implementation
 
 uses ParxVideoRAM, Parx24, Parx32;
+
 {$include parx.inc}
 
 function CopyRight: PChar; stdcall;
@@ -46,8 +45,12 @@ procedure SetPixTop(x,y: integer; colour: Hex24); stdcall;
 begin
 //  SetGFXPix(gfxTopLeftFramebuffers[bufnum],x,y,colour);
 //  SetGFXPix(gfxTopRightFramebuffers[bufnum],x,y,colour);
-  SetGFXPix(ParxLeft,x,y,colour);
-  SetGFXPix(ParxRight,x,y,colour);
+//  SetGFXPix(ParxLeft,x,y,colour);
+//  SetGFXPix(ParxRight,x,y,colour);
+  SetGFXPix(gfxTopLeftFramebuffers[0],x,y,colour);
+  SetGFXPix(gfxTopRightFramebuffers[0],x,y,colour);
+  
+  
 //  TopMap(colour,y,x,ParxLeft);
 //  TopMap(colour,y,x,ParxRight);
 end;

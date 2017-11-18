@@ -88,12 +88,13 @@
     procedure FloodFill(x0:cint; y0:cint; fillColor:u32; interiorColor:u32; screen:Pu8);cdecl;external;
 
 // ...
-procedure ClrAll(colour: u32); stdcall;  public name 'ClrAll';
+procedure ClrAll(colour: u32); stdcall; public name 'ClrAll';
+procedure InitParx(colour: u32); stdcall; public name 'InitParx';
 procedure InitBufSingle(colour: u32); stdcall; public name 'InitBufSingle';
 procedure InitBufDub(colour: u32); stdcall; public name 'InitBufDub';
 
 
 //call up the buffers 0 .. 1 for " ... & burst there double bubbles in 3D"
-procedure BufDubSub(index: u8); stdcall; public name 'BufDubSub';
+procedure BufDubSub(index: s8); stdcall; public name 'BufDubSub';
 procedure BufDubClr(colour: u32; index: u8); stdcall; public name 'BufDubClr';
 //kdl

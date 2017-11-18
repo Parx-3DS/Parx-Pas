@@ -56,6 +56,15 @@ uses
 {$define Quad}
 
 {$i BufferDef.inc}
+
+{$define ParxGrid}
+{$define TopMapped}
+{.$define BotMapped} //comment out for PBotRawLinear usage
+  {$include gfx.inc} 
+{.$undef BotMapped}
+{$undef TopMapped}
+{$undef ParxGrid}
+
         
         ParxL1 : PByte absolute $22C501; // $2FE or 766 bytes upto $22C7FF //(239 * 399)? 
         ParxR1 : PByte absolute $272D01; // $2FE or 766 bytes upto $2B97FF ?
@@ -80,6 +89,31 @@ BEGIN
   mvid^[v+1]:= c.n.g;
   mvid^[v+2]:= c.n.b;
   mvid^[v+3]:= c.n.a;
+END;
+
+// 
+procedure SetPixL(x: word; y: word;colour: TRGBA);stdcall; 
+BEGIN
+  gfxTopLeftFramebuffers[BuffIndex]^[x,y]:= BYTE32(colour)
+END;
+
+// 
+procedure SetPixR(x: word; y: word;colour: TRGBA);stdcall; 
+BEGIN
+  gfxTopRightFramebuffers[BuffIndex]^[x,y]:= BYTE32(colour)
+END;
+
+//assert define ln 62 (PBotRawLinear Vs. PBotMapLED) gfx.inc?
+procedure SetPixB(x: word; y: word;colour: TRGBA);stdcall; 
+var
+  v:longint;
+BEGIN
+  y := 239-y;
+  v:= (y+x*240)*4;
+  gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
+  gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
+  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
+  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.a;
 END;
 
 end.

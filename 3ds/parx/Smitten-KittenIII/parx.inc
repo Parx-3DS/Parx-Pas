@@ -39,14 +39,12 @@ begin
  gfxSetScreenFormat(GFX_BOTTOM, GSP_BGR8_OES);
 end;
 	 
-procedure InitBufSingle(colour: u32); stdcall;
+procedure InitParx(colour: u32); stdcall;
 begin
   propriganda;
   gfxSetDoubleBuffering(GFX_TOP,false);
   gfxSetDoubleBuffering(GFX_BOTTOM,false);
-  ParxLeft := gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil); 
-  ParxRight := gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil); 
-  ParxBot := gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil);
+  BufDubSub(-1);
   ClrAll(colour);//  ClrAll(BLACK);
 end;
 
@@ -58,12 +56,27 @@ begin
   ClrParx(gfxBottomFramebuffers[index], colour); 
 end;
 
-//call up the buffers 0 .. 1 for " ... & burst there double bubbles in 3D"
-procedure BufDubSub(index: u8); stdcall;
+//call up the buffers -1 .. 1 for " ... & burst there double bubbles in 3D"
+procedure BufDubSub(index: s8); stdcall;
 begin
-  gfxTopLeftFramebuffers[index] := gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil); 
-  gfxTopRightFramebuffers[index] := gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil);  
-  gfxBottomFramebuffers[index] := gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil);
+ if index <> -1  then 
+   begin
+   gfxTopLeftFramebuffers[index] := gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil); 
+   gfxTopRightFramebuffers[index] := gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil);  
+   gfxBottomFramebuffers[index] := gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil);
+  end else
+  begin
+   ParxLeft := gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil); 
+   ParxRight := gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil); 
+   ParxBot := gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil);
+  end 
+end;
+
+procedure InitBufSingle(colour: u32); stdcall;
+begin
+  gfxSetDoubleBuffering(GFX_TOP,false);
+  gfxSetDoubleBuffering(GFX_BOTTOM,false);
+  BufDubSub(0);
 end;
 
 procedure InitBufDub(colour: u32); stdcall;
@@ -73,5 +86,12 @@ begin
   gfxSetDoubleBuffering(GFX_BOTTOM,true);
   BufDubClr(colour,0);
   BufDubClr(colour,1);
+end;
+
+procedure RefreshBuffer(); stdcall;
+begin 
+ gfxFlushBuffers();
+ if BuffIndex <> -1 then gfxSwapBuffers();
+ if BuffIndex <> 1 then inc(BuffIndex) else dec(BuffIndex); 
 end;
 //kdl

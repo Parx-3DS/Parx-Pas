@@ -12,7 +12,8 @@ PBotMapLED= ^BotMapLED;
 Strife= Array[0..239, 0..{$i ZeroBase.inc}] Of Byte; 
 
 //VRAM Map sprites & after the collaps of Alpha ???
-var        
+
+    var
         ParxLeft1 : PTopRawLinear absolute PVL0;
         ParxRight1 : PTopRawLinear absolute PVR0;
         ParxBot1 : PBotRawLinear absolute PVB0;

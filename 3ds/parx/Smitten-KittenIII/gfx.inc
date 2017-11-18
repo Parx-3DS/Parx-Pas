@@ -22,21 +22,21 @@
   procedure gfxExit;cdecl;external;
 
   {control stuff }
-  procedure gfxSet3D(enable:bool);cdecl;external;
+  procedure gfxSet3D(enable:boolean);cdecl;external;
   function gfxIs3D:boolean;cdecl;external;
   procedure gfxFlushBuffers;cdecl;external;
   procedure gfxSwapBuffers;cdecl;external;
   procedure gfxSwapBuffersGpu;cdecl;external;
 
   {helper stuff }
-  function gfxGetFramebuffer(screen:gfxScreen_t; side:gfx3dSide_t; width:pu16; height:pu16):pu8;cdecl;external;
+  function gfxGetFramebuffer(screen:gfxScreen_t; side:gfx3dSide_t; width:pword; height:pword):pbyte;cdecl;external;
   procedure gfxSetScreenFormat(screen:gfxScreen_t; format:GSP_FramebufferFormats);cdecl;external;
   function gfxGetScreenFormat(screen:gfxScreen_t):GSP_FramebufferFormats;cdecl;external;
   procedure gfxSetDoubleBuffering(screen:gfxScreen_t; doubleBuffering:boolean);cdecl;external;
   procedure gfxConfigScreen(screen:gfxScreen_t; immediate:boolean);cdecl;external;
 
     var
-       gfxTopLeftFramebuffers : array[0..1] of ^u8;cvar;external;
-       gfxTopRightFramebuffers : array[0..1] of ^u8;cvar;external;
-       gfxBottomFramebuffers : array[0..1] of ^u8;cvar;external;
-       gxCmdBuf : ^u32;cvar;external;
+       gfxTopLeftFramebuffers : array[0..1] of {$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external;
+       gfxTopRightFramebuffers : array[0..1] of{$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external;
+       gfxBottomFramebuffers : array[0..1] of {$ifdef ParxGrid}{$i BMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external; 
+       gxCmdBuf : ^dword;cvar;external;
