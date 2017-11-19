@@ -4,8 +4,9 @@ I'll retract these web search quries after some of these persons charged with as
 
 # Parx-Pas (Lady Zürich -1.0)  
 ## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs &  
-## functional Get&Set L/R/B 3D centric Video Display Drivers built & test in pascal!  
-## AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS nintendo", & this "GDI Canvas" portions used in or on any 3ds computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
+## in Pascal fully functional Get&Set L/R/B 3D centric video display driver, built & tested!  
+  
+## AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS Nintendo", & this "GDI Canvas" portions used in or on any 3ds computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ## In short I, require prior consent! in support of this valent team 
 ## Lot's are Rooting for U ever day, push your ideas on the "Three-DS, Computer's Desk" & we together enter in to a commercial product so please enjoy!    
 
