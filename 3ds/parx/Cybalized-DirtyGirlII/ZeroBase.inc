@@ -1,0 +1,1 @@
+{$ifdef Quad}3{$else}2{$endif Quad}
