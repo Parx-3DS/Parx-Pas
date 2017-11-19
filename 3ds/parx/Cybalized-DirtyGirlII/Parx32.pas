@@ -1,4 +1,11 @@
-//copyrights 2017 Kenneth Dwayne Lee 
+//Nintendo 2DS .. 3DS Pascal Development 
+//  
+//  illustrated in pascal resorting to Plan "B" long ago & still I'm short sums of money from none other than 
+//                a.) Oil & Gas Re: Television, media, communications &or radio their divsions 
+//                b.) ANY Corporate logos & Trade Marks usage of "Must provide resonable funding!"  
+//   
+// copyrights 2017 Kenneth Dwayne Lee 
+//all rights reserved.
 
 unit Parx32;
  
@@ -46,10 +53,6 @@ PRGBATop= ^RGBATop;
 RGBABot= array[0..319,0..239] of TRGBA; //240×320
 PRGBABot= ^RGBABot;
 
-{$define Quad}
-{.$i GFXMethodDef.inc}
-{$undef Quad}
-
 implementation
 
 uses 
@@ -72,72 +75,13 @@ uses
         ParxR1 : PByte absolute $272D01; // $2FE or 766 bytes upto $2B97FF ?
         ParxB1 : PByte absolute $4C7401; //$3FE or 1022 bytes upto $4C77FF //(239 * 339)??
 
-
-{$.i GFXMethodTable.inc}
+{$define Trap}
+{$i Regime.inc}
+{$undef Trap}
 
 {$undef Quad}
 
-//I'd like too spank "lets play, pick a hole" for every thing !!!  
-function GetPixL(x: word; y: word): TRGBA;stdcall;
-BEGIN
-  GetPixL:= TRGBA(gfxTopLeftFramebuffers[BuffIndex]^[x,y]);
-END;
- 
-function GetPixR(x: word; y: word): TRGBA;stdcall;
-BEGIN
-  GetPixR:= TRGBA(gfxTopRightFramebuffers[BuffIndex]^[x,y]);
-END;
-  
-function GetPixB(x: word; y: word): TRGBA;stdcall;
-VAR	
-  v:longint;
-  c: TRGBA;
-BEGIN
-  y := 239-y;
-  v:= (y+x*240)*3;
-  c.r:= gfxBottomFramebuffers[BuffIndex]^[v];
-  c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
-  c.b:= gfxBottomFramebuffers[BuffIndex]^[v+2];
-  c.a:= gfxBottomFramebuffers[BuffIndex]^[v+3];
-  GetPixB:= c;
-END;
-
-// 
-procedure SetPixL(x: word; y: word;colour: TRGBA);stdcall; 
-BEGIN
-  gfxTopLeftFramebuffers[BuffIndex]^[x,y]:= BYTE32(colour)
-END;
-
-//comment out untill tests  
-procedure SetPixR(x: word; y: word;colour: TRGBA);stdcall; 
-BEGIN
-  gfxTopRightFramebuffers[BuffIndex]^[x,y]:= BYTE32(colour)
-END;
-
-//assert define ln 62 (PBotRawLinear Vs. PBotMapLED) gfx.inc?
-procedure SetPixB(x: word; y: word;colour: TRGBA);stdcall; 
-var
-  v:longint;
-BEGIN
-  y := 239-y;
-  v:= (y+x*240)*4;
-  gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
-  gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
-  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
-  gfxBottomFramebuffers[BuffIndex]^[v+3]:= colour.a;
-END;
-
-//  
-procedure TopByteFill(screen:PByte; Interval:BYTE; Pitch: BYTE);stdcall;
-Var
-  x,y: integer;
-  mvid : PTopMapLED; // PBGRTop; //PTopMapLED; // absolute screen;
-BEGIN
-  mvid:= PTopMapLED(screen);
-        for x :=  0 to 399 do 
-        for y :=  0 to 239 do  
-  mvid^[x,y,Interval]:= Pitch //.r; 
-END;
+{$i IntervalPitch.inc}
 
 //
 procedure SetGFXPix(screen:Pbyte; x: word; y: word;colour: BoolBit32);stdcall; overload; //& make a C call 

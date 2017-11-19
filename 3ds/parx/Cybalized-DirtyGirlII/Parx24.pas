@@ -1,4 +1,11 @@
-//copyrights 2017 Kenneth Dwayne Lee 
+//Nintendo 2DS .. 3DS Pascal Development 
+//  
+//  illustrated in pascal resorting to Plan "B" long ago & still I'm short sums of money from none other than 
+//                a.) Oil & Gas Re: Television, media, communications &or radio their divsions 
+//                b.) ANY Corporate logos & Trade Marks usage of "Must provide resonable funding!"  
+//   
+// copyrights 2017 Kenneth Dwayne Lee 
+//all rights reserved.
 
 unit Parx24;
  
@@ -47,14 +54,14 @@ procedure PSetPixB(screen:PByte; x: word; y: word;colour: TBGR);stdcall; public 
 procedure PSetPixT(screen:PByte; x: word; y: word;colour: TBGR);stdcall; public name 'PSetPixT';
 
 //works 
-function GetPixL(x: word; y: word): TBGR;stdcall; public name 'GetPixL';
-function GetPixR(x: word; y: word): TBGR;stdcall; public name 'GetPixR';
-function GetPixB(x: word; y: word): TBGR;stdcall; public name 'GetPixB';
+//function GetPixL(x: word; y: word): TBGR;stdcall; public name 'GetPixL';
+//function GetPixR(x: word; y: word): TBGR;stdcall; public name 'GetPixR';
+//function GetPixB(x: word; y: word): TBGR;stdcall; public name 'GetPixB';
 
 //Works t&b, i'll say again I'm not in love persay, But she does give good   
-procedure SetPixL(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixL';
-procedure SetPixR(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixR';
-procedure SetPixB(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixB';
+//procedure SetPixL(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixL';
+//procedure SetPixR(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixR';
+//procedure SetPixB(x: word; y: word;colour: TBGR);stdcall; public name 'SetPixB';
 
 procedure HexTopfill(screen:PByte);stdcall; public name 'HexTopfill';
 procedure SetGFXPix(screen:PByte; x: word; y: word;colour: TBGR);stdcall; overload; //public name 'SetGFXPix';
@@ -64,7 +71,10 @@ procedure PasClrSrc(screen:PByte; colour: TBGR);stdcall; public name 'PasClrSrc'
 procedure PasTopfill(screen:PByte; colour: TBGR);stdcall; public name 'PasTopfill';
 procedure PasBotfill(screen:PByte);stdcall; public name 'PasBotfill';
 
-{.$i GFXMethodDef.inc}
+
+{$define Trap}
+{$i Regime_inf.inc}
+{$undef Trap}
 
 implementation
 
@@ -98,7 +108,11 @@ var
         ParxR1 : PByte absolute $272D01; // $2FE or 766 bytes upto $2B97FF
         ParxB1 : PByte absolute $4C7401; //$3FE or 1022 bytes upto $4C77FF?
 
-{.$i GFXMethodTable.inc}
+{$define Trap}
+{$i Regime.inc}
+{$undef Trap}
+
+{$i IntervalPitch.inc}
 
 // x,y zero @ top screen 
 procedure PSetPixB(screen:PByte; x: word; y: word;colour: TBGR);stdcall;
@@ -128,8 +142,7 @@ BEGIN
   mvid^[v+2]:= colour.r;
 END;
 
-
-//
+//Works in Double Buffing
 procedure Topfill1;stdcall;
 Var
   le: integer;
@@ -245,86 +258,6 @@ BEGIN
   mvid^[v]:=  c.n.b;
   mvid^[v+1]:= c.n.g;
   mvid^[v+2]:= c.n.r;
-END;
-
-// etching buffers grids L/R/B, I'm not in love with these means of   
-procedure SetPixL(x: word; y: word;colour: TBGR);stdcall; 
-BEGIN
-//  if BuffIndex <> -1 then
-  gfxTopLeftFramebuffers[BuffIndex]^[x,y]:= BYTE24(colour)
-//  else PTopMapLED(ParxLeft)^[x,y]:= BYTE24(colour)
-END;
-
-// PTopMapLED is 2 times faster that PTopRawLinear 
-procedure SetPixR(x: word; y: word;colour: TBGR);stdcall;
-//var
-//  v:longint;
-BEGIN
-//  y := 239-y;
-//  v:= (y+x*240)*3;
-//  gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
-//  gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
-//  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
-  gfxTopRightFramebuffers[BuffIndex]^[x,y]:= BYTE24(colour)
-END;
-
-//assert define ln 77  PBotRawLinear Vs. PBotMapLED ?
-procedure SetPixB(x: word; y: word;colour: TBGR);stdcall; 
-var
-  v:longint;
-BEGIN
-  y := 239-y;
-  v:= (y+x*240)*3;
-  gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
-  gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
-  gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
-END;
-
-//lets play, pick a hole  
-function GetPixL(x: word; y: word): TBGR;stdcall;
-//VAR	
-//  v:longint;
-//  c: TBGR;
-BEGIN
-{  y := 239-y;
-  v:= (y+x*240)*3;
-  c.b:= gfxBottomFramebuffers[BuffIndex]^[v];
-  c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
-  c.r:= gfxBottomFramebuffers[BuffIndex]^[v+2];
-  GetPixL:= c;
-}
-  GetPixL:= TBGR(gfxTopLeftFramebuffers[BuffIndex]^[x,y]);  
-  
-END;
-
-  
-function GetPixR(x: word; y: word): TBGR;stdcall;
-//VAR	
-//  v:longint;
-//  c: TBGR;
-BEGIN
-//  y := 239-y;
-//  v:= (y+x*240)*3;
-//  c.b:= gfxTopRightFramebuffers[BuffIndex]^[v];
-//  c.g:= gfxTopRightFramebuffers[BuffIndex]^[v+1];
-//  c.r:= gfxTopRightFramebuffers[BuffIndex]^[v+2];
-//  GetPixR:= c;
-  
-  GetPixR:= TBGR(gfxTopRightFramebuffers[BuffIndex]^[x,y]);
-END;
-  
-// 
-function GetPixB(x: word; y: word): TBGR;stdcall;
-VAR	
-  v:longint;
-  c: TBGR;
-BEGIN
-  y := 239-y;
-  v:= (y+x*240)*3;
-  c.b:= gfxBottomFramebuffers[BuffIndex]^[v];
-  c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
-  c.r:= gfxBottomFramebuffers[BuffIndex]^[v+2];
-  GetPixB:= c;
 END;
 
 end.
