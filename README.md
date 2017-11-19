@@ -2,7 +2,7 @@
 Any software works derive &or that make use of MUST include "web search quries" listed!  
 I'll retract these web search quries after some of these persons charged with assalt & etc...
 
-# Parx-Pas (Lady Zürich 1.0)  
+# Parx-Pas (Lady Zürich -1.0)  
 ## Three-DS, Computers "Parx-3DS" GDI/Canvas freepascal public stubs  
 ## & AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS nintendo", & this "GDI Canvas" portions used in or on any 3ds computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ## In short I, require prior consent! in support of this valent team 
