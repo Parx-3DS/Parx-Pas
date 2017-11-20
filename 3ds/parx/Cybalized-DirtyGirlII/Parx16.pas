@@ -1,11 +1,11 @@
-//Everyone has to face there own 16bit evils some time, or a other 
+//Everyone has to face there own 16bit evils some time, or an other 
 //
 //I've organized your journey into 
 //        &or
 ///  from the bowels of 
 //
-//as to "why & where is this, the red dwarf?" 
-//& rgb16 format true, true, true, Nintendo 2DS .. 3DS Channel 5 Live from -39 & a wind chill plus?
+//as to "why & where is this", the red dwarf? 
+//in rgb16 format true, true, true ... Nintendo 2DS .. 3DS Channel 5 Live from -39 & a wind chill plus?
 
 //is avail in 3D, on boob your area?
 //--> http://www.google.ca/search?q=secam+pal 
@@ -28,13 +28,11 @@ BIN16 = 0..%1111111111111111;
 BoolBit16= array[0..15] of boolean; 
 Byte16= array[0..1] of Byte;
 
-B6= array[0..5] of boolean; 
+B5= array[0..4] of boolean; 
 G6= array[0..5] of boolean; 
-
-B5= array[0..5] of boolean; 
-G5= array[0..5] of boolean; 
-
+G5= array[0..4] of boolean; 
 R5= array[0..4] of boolean; 
+Colour4= array[0..3] of boolean;
 
 //mode 2 RGB5_A1_OES                  RGB  
 TRGB565 = record
@@ -53,10 +51,7 @@ end;
 
 //mod 4 RGBA4_OES                    RGBA
 TRGBA4 = record
-R: array[0..3] of boolean,
-G: array[0..3] of boolean,
-B: array[0..3] of boolean,
-A: array[0..3] of boolean;
+R,G,B,A: Colour4;
 end; 
 
 //--> https://www.khronos.org/registry/OpenGL/extensions/OES/OES_compressed_paletted_texture.txt
