@@ -1,12 +1,23 @@
+//Everyone has to face there own 16 evils some time, 
+//
+//I've organized your journey into 
+//        &or
+///  from the bowels of 
+//
+//as to "why & where is this, the red dwarf?" 
+//& rgb16 format true, true, true, Nintendo 2DS .. 3DS Channel 5 Live from -39 & a wind chill plus?
+
+//is 3D avail, on boob your area?
+//--> http://www.google.ca/search?q=secam+pal 
+ 
+//(when two tribe goto &or it's love on) Xerox's common user interface. Thire in the parc, doing it cum quickly
+//--> http://www.google.ca/search?q=kde+gnome+comparison
+
 unit Parx16;
  
 {$mode objfpc}{$H+}
  
 interface
- 
-        
-//32bit Quad
-//TRGBA= array[0..3] of u8;
 
 type
 DEC16 = 0..65535;
@@ -17,8 +28,45 @@ BIN16 = 0..%1111111111111111;
 BoolBit16= array[0..15] of boolean; 
 Byte16= array[0..1] of Byte;
 
+B6= array[0..5] of boolean; 
+G6= array[0..5] of boolean; 
+
+B5= array[0..5] of boolean; 
+G5= array[0..5] of boolean; 
+
+R5= array[0..4] of boolean; 
+
+//mode 2 RGB5_A1_OES                  RGB  
+TRGB565 = record
+R:R5,
+G:G6,
+B:B5
+end; 
+
+//mode 3 RGB5_A1_OES                  RGBA  
+TRGB5_A1 = record
+R:R5,
+G:G5,
+B:B5,
+A:boolean;
+end; 
+
+//mod 4 RGBA4_OES                    RGBA
+TRGBA4 = record
+R: array[0..4] of boolean,
+G: array[0..4] of boolean,
+B: array[0..4] of boolean,
+A: array[0..4] of boolean;
+end; 
+
+//--> https://www.khronos.org/registry/OpenGL/extensions/OES/OES_compressed_paletted_texture.txt
+//--> https://github.com/Parx-3DS/Parx-Pas/blob/master/3ds/parx/Cybalized-DirtyGirlII/gfx.inc
 TRGB16 = record
-C:word;
+ case longint of
+  0 : (C :word)
+  1 : (cA1 : TRGB5_A1);
+  2 : (c565 : TRGB565);
+  3 : (cA4 : TRGBA4);
 end; 
 
  ColourExt = record
@@ -32,8 +80,6 @@ end;
   6 : (Bytes: Byte16); 
  end; 
  
-
-
 RGBATopi= array[0..96000] of TRGB16; //240×400
 PRGBATopi= ^RGBATopi;
 RGBABoti= array[0..76800] of TRGB16; //240×320
