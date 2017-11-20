@@ -1,4 +1,4 @@
-//Everyone has to face there own 16 evils some time, 
+//Everyone has to face there own 16bit evils some time, or a other 
 //
 //I've organized your journey into 
 //        &or
@@ -7,10 +7,10 @@
 //as to "why & where is this, the red dwarf?" 
 //& rgb16 format true, true, true, Nintendo 2DS .. 3DS Channel 5 Live from -39 & a wind chill plus?
 
-//is 3D avail, on boob your area?
+//is avail in 3D, on boob your area?
 //--> http://www.google.ca/search?q=secam+pal 
  
-//(when two tribe goto &or it's love on) Xerox's common user interface. Thire in the parc, doing it cum quickly
+//(when two tribe goto &or it's love on) Xerox's common user interface. Thire in the parc; doing it; cum quickly
 //--> http://www.google.ca/search?q=kde+gnome+comparison
 
 unit Parx16;
@@ -53,21 +53,21 @@ end;
 
 //mod 4 RGBA4_OES                    RGBA
 TRGBA4 = record
-R: array[0..4] of boolean,
-G: array[0..4] of boolean,
-B: array[0..4] of boolean,
-A: array[0..4] of boolean;
+R: array[0..3] of boolean,
+G: array[0..3] of boolean,
+B: array[0..3] of boolean,
+A: array[0..3] of boolean;
 end; 
 
 //--> https://www.khronos.org/registry/OpenGL/extensions/OES/OES_compressed_paletted_texture.txt
-//--> https://github.com/Parx-3DS/Parx-Pas/blob/master/3ds/parx/Cybalized-DirtyGirlII/gfx.inc
 TRGB16 = record
  case longint of
-  0 : (C :word)
+  0 : (W :word)
   1 : (cA1 : TRGB5_A1);
   2 : (c565 : TRGB565);
   3 : (cA4 : TRGBA4);
 end; 
+//--> https://github.com/Parx-3DS/Parx-Pas/blob/master/3ds/parx/Cybalized-DirtyGirlII/gfx.inc
 
  ColourExt = record
  case longint of
