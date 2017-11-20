@@ -1,3 +1,12 @@
+//Nintendo 2DS .. 3DS Pascal, in Development 
+//  
+//  illustrated in pascal resorting to Plan "B" long ago & still I'm short sums of money from none other than 
+//                a.) Oil & Gas Re: Television, media, communications &or radio & any of their divsions. 
+//                b.) ANY Corporate logos & Trade Marks usage of "Must provide reasonable funding!"  
+//   
+// copyrights 2017 Kenneth Dwayne Lee 
+//all rights reserved.
+
 type
 TopRawLinear= array[0..{$ifdef Quad}499999 {$else}287999 {$endif Quad}] of Byte; //240×400×(4 or 3)bytes  
 PTopRawLinear= ^TopRawLinear;
