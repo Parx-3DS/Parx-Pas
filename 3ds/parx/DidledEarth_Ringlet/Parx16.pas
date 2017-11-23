@@ -80,9 +80,9 @@ TRGB16 = word;
  end; 
  
 
-RGB16Topi= array[0..96000] of TRGB16; //240×400
+RGB16Topi= array[0..95999] of TRGB16; //240×400
 PRGB16Topi= ^RGB16Topi;
-RGB16Boti= array[0..76800] of TRGB16; //240×320
+RGB16Boti= array[0..76799] of TRGB16; //240×320
 PRGB16Boti= ^RGB16Boti;
 
 RGB16Top= array[0..399,0..239] of TRGB16; //240×400

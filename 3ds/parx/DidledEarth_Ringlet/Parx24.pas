@@ -37,9 +37,9 @@ HEX24 = 0..$ffffff; //# Sys
 BoolBit24= array[0..31] of boolean; 
 Byte24= array[0..2] of byte;
 
-BGRTopi= array[0..96000] of TBGR; //240×400
+BGRTopi= array[0..95999] of TBGR; //240×400
 PBGRTopi= ^BGRTopi;
-BGRBoti= array[0..76800] of TBGR; //240×320
+BGRBoti= array[0..76799] of TBGR; //240×320
 PBGRBoti= ^BGRBoti;
 
 BGRTop= array[0..399,0..239] of TBGR; //240×400
@@ -87,7 +87,7 @@ uses
  
 type
  ColourExt = record
- case longint of
+ case HEX24 of
   0 : (N : TBGR);
   1 : (O : HEX24); 
   2 : (Bytes: Byte24); 

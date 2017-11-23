@@ -40,9 +40,9 @@ end;
  
 
 
-RGBATopi= array[0..96000] of TRGBA; //240×400
+RGBATopi= array[0..95999] of TRGBA; //240×400
 PRGBATopi= ^RGBATopi;
-RGBABoti= array[0..76800] of TRGBA; //240×320
+RGBABoti= array[0..76799] of TRGBA; //240×320
 PRGBABoti= ^RGBABoti;
 
 RGBATop= array[0..399,0..239] of TRGBA; //240×400

@@ -31,7 +31,7 @@ function CopyRight: PChar; stdcall; public name 'CopyRight';
 
 implementation
 
-uses ParxVideoRAM, Parx16, Parx24, Parx32;
+uses ParxVideoRAM, ParxM, Parx16, Parx24, Parx32;
 
 {$include parx.inc}
 

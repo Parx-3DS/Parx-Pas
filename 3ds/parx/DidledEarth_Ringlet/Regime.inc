@@ -24,14 +24,16 @@ VAR
   c: {$i Propaganda.inc};
 BEGIN
   y := 239-y;
-  v:= (y+x*240) * {$ifdef Sweet16} 2; 
+  v:= (y+x*240) {$ifdef MCRobot};  
+  c:= gfxBottomFramebuffers[BuffIndex]^[v];
+      {$endif MCRobot}{$ifdef Sweet16} * 2; 
   c:= (gfxBottomFramebuffers[BuffIndex]^[v] shr 4) + gfxBottomFramebuffers[BuffIndex]^[v+1];
   //c.byte[1]:= gfxBottomFramebuffers[BuffIndex]^[v+1];
-      {$endif Sweet16}{$ifdef Triplet} 3; 
+      {$endif Sweet16}{$ifdef Triplet} * 3; 
   c.b:= gfxBottomFramebuffers[BuffIndex]^[v];
   c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
   c.r:= gfxBottomFramebuffers[BuffIndex]^[v+2]; 
-      {$endif Triplet}{$ifdef Quad} 4;
+      {$endif Triplet}{$ifdef Quad} * 4;
   c.r:= gfxBottomFramebuffers[BuffIndex]^[v];
   c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
   c.b:= gfxBottomFramebuffers[BuffIndex]^[v+2];
@@ -56,14 +58,16 @@ var
   v:longint;
 BEGIN
   y := 239-y;
-  v:= (y+x*240)* {$ifdef Sweet16} 2; 
+  v:= (y+x*240){$ifdef MCRobot};  
+  gfxBottomFramebuffers[BuffIndex]^[v] := colour;
+      {$endif MCRobot}{$ifdef Sweet16} * 2; 
   gfxBottomFramebuffers[BuffIndex]^[v]   := hi(colour); 
   gfxBottomFramebuffers[BuffIndex]^[v+1] := lo(colour);
-      {$endif Sweet16}{$ifdef Triplet} 3; 
+      {$endif Sweet16}{$ifdef Triplet} * 3; 
   gfxBottomFramebuffers[BuffIndex]^[v]:= colour.b;
   gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
   gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.r;
-       {$endif Triplet}{$ifdef Quad} 4;
+       {$endif Triplet}{$ifdef Quad} * 4;
   gfxBottomFramebuffers[BuffIndex]^[v]:= colour.r;
   gfxBottomFramebuffers[BuffIndex]^[v+1]:= colour.g;
   gfxBottomFramebuffers[BuffIndex]^[v+2]:= colour.b;

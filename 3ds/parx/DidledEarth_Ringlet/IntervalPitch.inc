@@ -9,7 +9,7 @@
 
 
 //Top screens are declared as MapLED 
-procedure TopByteFill(screen:PByte; Interval:BYTE; Pitch: BYTE);stdcall;
+procedure TopByteFill(screen:PByte; Interval:BYTE; Pitch: {$ifdef MCRobot}Boolean {$else}BYTE {$endif MCRobot});stdcall;
 Var
   x,y: integer;
   mvid : PTopMapLED; 
@@ -17,17 +17,27 @@ BEGIN
   mvid:= PTopMapLED(screen);
         for x :=  0 to 399 do 
         for y :=  0 to 239 do  
-  mvid^[x,y,Interval]:= Pitch //.r; 
+  {$ifdef MCRobot}
+   if (Interval mod y) <> 0 then
+   mvid^[x,y]:= Pitch
+  {$else}
+  mvid^[x,y,Interval]:= Pitch 
+  {$endif MCRobot}
 END;
 
 //Bottem declared as RawLinear  
-procedure BotByteFill(screen:PByte; Interval:BYTE; Pitch: BYTE);stdcall;
+procedure BotByteFill(screen:PByte; Interval:BYTE; Pitch: {$ifdef MCRobot}Boolean {$else}BYTE {$endif MCRobot});stdcall;
 Var
   x,y: integer;
   mvid : PBotMapLED; 
 BEGIN
   mvid:= PBotMapLED(screen); 
         for x :=  0 to 339 do 
-        for y :=  0 to 239 do  
-  mvid^[x,y,Interval]:= Pitch //.r; 
+        for y :=  0 to 239 do    
+  {$ifdef MCRobot}
+   if (Interval mod y) <> 0 then
+   mvid^[x,y]:= Pitch
+  {$else}
+  mvid^[x,y,Interval]:= Pitch 
+  {$endif MCRobot}
 END;
