@@ -37,11 +37,7 @@
   procedure gfxSetDoubleBuffering(screen:gfxScreen_t; doubleBuffering:boolean);cdecl;external;
   procedure gfxConfigScreen(screen:gfxScreen_t; immediate:boolean);cdecl;external;
 
-    var
-        ParxBot :  {$ifdef ParxGrid}{$i BMapper.inc}{$else}pbyte{$endif ParxGrid};cvar;external;
-        ParxLeft : {$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid};cvar;external;
-        ParxRight :{$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid};cvar;external;
-        
+    var        
        gfxTopLeftFramebuffers  : array[0..1] of {$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external;
        gfxTopRightFramebuffers : array[0..1] of {$ifdef ParxGrid}{$i TMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external;
        gfxBottomFramebuffers   : array[0..1] of {$ifdef ParxGrid}{$i BMapper.inc}{$else}pbyte{$endif ParxGrid} ;cvar;external; 

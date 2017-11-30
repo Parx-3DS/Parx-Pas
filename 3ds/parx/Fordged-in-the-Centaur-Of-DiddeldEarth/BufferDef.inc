@@ -22,14 +22,14 @@ PBotMapLED= ^BotMapLED;
 Strife= Array[0..239 {$ifdef MCRobot} ] of XBW {$else} ,0..{$i ZeroBase.inc}] of Byte {$endif MCRobot}; 
 
 //VRAM Map sprites & after the collaps of Alpha ???
-//Pointer & Type seem to Work in Double Buffering
+//cast as Type seem to Work in Single & Double Buffering  
     var
-        ParxLeft1 : PTopRawLinear absolute PVL0;
-        ParxRight1 : PTopRawLinear absolute PVR0;
-        ParxBot1 : PBotRawLinear absolute PVB0;
+        ParxLeft0 :  TopMapLED 		absolute PVL0;
+        ParxRight0 : TopMapLED 		absolute PVR0;
+        ParxBot0 :   BotRawLinear 	absolute PVB0;
                 
-        ParxLeft2 : TopMapLED absolute PVL1; 
-        ParxRight2 : TopMapLED absolute PVR1;
-        ParxBot2 : BotMapLED absolute PVB1;
+        ParxLeft1 :  TopMapLED 		absolute PVL1; 
+        ParxRight1 : TopMapLED 		absolute PVR1;
+        ParxBot1 :   BotRawLinear 	absolute PVB1;
         
 //kdl

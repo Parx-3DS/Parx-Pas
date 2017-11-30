@@ -205,7 +205,7 @@ CanvasString(ParxBot, str, 10,10, GREEN);
                 if(kDown & KEY_R)
                         {	
                               	InitBufSingle(BLACK);
-                              //  Topfill2;
+                                Topfill2;
                                 ClrParx(ParxBot, BLACK);
                                // sprintf(str, "Dergibal Rad:%i  X:%i  Y:%i", i, posx, posy);
 				CanvasString(ParxBot, "InitBufSingle", 40, 0, RED);
@@ -214,7 +214,7 @@ CanvasString(ParxBot, str, 10,10, GREEN);
                 if(kDown & KEY_L) 
                         {	
                         	InitBufDub(BLACK);		
-			      //  Topfill1;
+			        Topfill1;
                                 ClrParx(ParxBot, BLACK);
                               //  sprintf(str, "Dergibal Rad:%i  X:%i  Y:%i", i, posx, posy);
 				CanvasString(ParxBot, "InitBufDub", 0, 40, RED);
@@ -266,14 +266,24 @@ time = osGetTime() - time;
 sprintf(str, "Left %i:ms ParxPro,kdl", time);
 CanvasString(ParxBot, str, 10,10, LIGHT_GREEN); 
 
-time= osGetTime();			
-//SetSrcR(0,ParxLeft);		
-SetSrcR(-1,GetSrcL(-1));
+time= osGetTime();				
+ParxLeft = GetSrcL(0); //	
+ParxLeft = GetSrcL(1);	
                     //   for (k=0;k<400;k++)
                     //      for (l=0;l<240;l++) PSetPixT(GetSrcR(0),k,l,rgb); //GetSrcR(0) works                      
 time = osGetTime() - time; 
-sprintf(str, "SetSrcR %i:ms from GetSrcL,kdl", time);
+sprintf(str, "ParxLeft = GetSrcL(0&1); %i:ms ,kdl", time);
 CanvasString(ParxBot, str, 10,20, LIGHT_GREEN); 
+
+time= osGetTime();			
+SetSrcL(-1,ParxLeft);	// jumping in and out of sing & dub it 
+
+//ParxLeft = GetSrcL(-1);	// this stalls?	
+                    //   for (k=0;k<400;k++)
+                    //      for (l=0;l<240;l++) PSetPixT(GetSrcR(0),k,l,rgb); //GetSrcR(0) works                      
+time = osGetTime() - time; 
+sprintf(str, "ParxLeft = GetSrcL(-1);; %i:ms ,kdl", time);
+//CanvasString(ParxBot, str, 10,30, LIGHT_GREEN); 
 			}
 
                 if(kDown & KEY_DLEFT)
