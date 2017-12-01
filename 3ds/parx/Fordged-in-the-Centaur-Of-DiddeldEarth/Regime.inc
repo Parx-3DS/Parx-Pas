@@ -123,17 +123,17 @@ end;
 
 var
         ParxBot :  {$i BMapper.inc};cvar;external; 
-        ParxLeft : {$undef Trap}{$i Rastarfar.inc} {$define Trap};cvar;external;
-        ParxRight :{$undef Trap}{$i Rastarfar.inc} {$define Trap};cvar;external;
+        ParxLeft : {$i Rastarfar.inc};cvar;external;
+        ParxRight :{$i Rastarfar.inc};cvar;external;
     
 //calls based in InitBufDub 
 //ParxLeft := GetSrcL(0) or GetSrcL(1); 
-Function GetSrcL(index: integer):{$undef Trap}{$i Rastarfar.inc} {$define Trap};stdcall;[Public];
+Function GetSrcL(index: integer):{$i Rastarfar.inc};stdcall;[Public];
 begin
  if index <> -1  then 
  case index of
-  0 : Result := {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxLeft0);
-  1 : Result := {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxLeft1); 
+  0 : Result := {$i Rastarfar.inc}(ParxLeft0);
+  1 : Result := {$i Rastarfar.inc}(ParxLeft1); 
  end
     
   { Result := {$ifdef MCRobot}PXTop {$endif MCRobot}
@@ -144,12 +144,12 @@ begin
    Result := ParxLeft  
 end;
 
-Function GetSrcR(index: integer):{$undef Trap}{$i Rastarfar.inc} {$define Trap};stdcall;[Public]; 
+Function GetSrcR(index: integer):{$i Rastarfar.inc};stdcall;[Public]; 
 begin
  if index <> -1  then 
  case index of
-  0 : Result := {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxRight0);
-  1 : Result := {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxRight1); 
+  0 : Result := {$i Rastarfar.inc}(ParxRight0);
+  1 : Result := {$i Rastarfar.inc}(ParxRight1); 
  end else 
    Result := ParxRight
 end;
@@ -172,33 +172,27 @@ begin
     	     {$ifdef Quad}PRGBABot{$endif Quad}(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil))^;
 end;
     
-{$define TopMapped}
-{.$define BotMapped} //comment out for PBotRawLinear usage
- {.$i TMapper.inc}
-{.$undef BotMapped}
-{$undef TopMapped}
-
 //calls in InitBufSingle 
-//SetSrcL(-1,ParxLeft);	// jumping in and out of sing & dub it 
+//SetSrcL(-1,ParxLeft);	// jumping in and out of single & double it (glitchs &or freezes) feud if buffer aren't their
 //
-procedure SetSrcL(index: integer; Val :{$undef Trap}{$i Rastarfar.inc} {$define Trap});stdcall; [Public];
+procedure SetSrcL(index: integer; Val :{$i Rastarfar.inc});stdcall; [Public];
 begin
  if index <> -1  then 
  case index of
-  0 : {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxLeft0) := Val;
-  1 : {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxLeft1) := Val; 
+  0 : {$i Rastarfar.inc}(ParxLeft0) := Val;
+  1 : {$i Rastarfar.inc}(ParxLeft1) := Val; 
  end
 else
 //   LScr[index] := Val; 
    ParxLeft := Val;
 end;
 
-procedure SetSrcR(index: integer; Val :{$undef Trap}{$i Rastarfar.inc} {$define Trap}); stdcall;[Public];
+procedure SetSrcR(index: integer; Val :{$i Rastarfar.inc}); stdcall;[Public];
 begin
  if index <> -1  then 
  case index of
-  0 : {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxRight0) := Val;
-  1 : {$undef Trap}{$i Rastarfar.inc} {$define Trap}(ParxRight1) := Val; 
+  0 : {$i Rastarfar.inc}(ParxRight0) := Val;
+  1 : {$i Rastarfar.inc}(ParxRight1) := Val; 
  end 
   else
  //  RScr[index] := Val; 
