@@ -172,20 +172,29 @@ BEGIN
   mvid^[v+2]:= colour.r;
 END;
 
-//Works in Double Buffing
+//Works in Double Buffing not in single
 procedure Topfill1;stdcall;
 Var
+  x,y,c: integer;
+BEGIN
+        for x :=  0 to 399 do 
+        for y :=  0 to 239 do
+        for c :=  0 to 2 do 
+       	begin
+	        ParxLeft0[x,y,c]:= $FF;
+                ParxRight0[x,y,c]:= $FF;
+        end;
+{Var
   le: integer;
 BEGIN
-
         for le := 0 to 287999 do 
        	begin	
 	        ParxLeft1^[le]:= $CC;
                 ParxRight1^[le]:= $CC;
-        end;
+        end;}
 END;
 
-//Works in Double Buffing
+//Works in single & Double Buffing
 procedure Topfill2;stdcall;
 Var
   x,y,c: integer;
@@ -194,8 +203,8 @@ BEGIN
         for y :=  0 to 239 do
         for c :=  0 to 2 do 
        	begin
-	        ParxLeft2[x,y,c]:= $FF;
-                ParxRight2[x,y,c]:= $FF;
+	        ParxLeft1[x,y,c]:= $FF;
+                ParxRight1[x,y,c]:= $FF;
         end;
 
 END;

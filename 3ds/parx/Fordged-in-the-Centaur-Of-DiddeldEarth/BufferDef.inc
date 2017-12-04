@@ -3,7 +3,7 @@
 //De Coded "Channel 5" transmissions of Sisters Sledge & the armada of hypoalogentic
 
 //But Sir: U'r Eminence, Her distress beacon it's the telegraph is requesting "send in the clowns"?
-//U'r Eminence if wii kick in the doors & dump there knight $tand$ of Modjula $epretistS 
+//U'r Eminence if wii kick in the doors & dump there knight $tand$ of Modula $epretistS 
 //Yes i'll do it in for "Kink & cunt for free"   
   
    

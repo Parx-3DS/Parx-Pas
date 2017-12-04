@@ -99,7 +99,7 @@ int main()
         TBGR rgbsam;
         TBGR rgb;
 	u64 time; 
-
+	u8* tempScr;
 	// Main loop
 	while (aptMainLoop())
 	{
@@ -267,22 +267,24 @@ sprintf(str, "Left %i:ms ParxPro,kdl", time);
 CanvasString(ParxBot, str, 10,10, LIGHT_GREEN); 
 
 time= osGetTime();				
-ParxLeft = GetSrcL(0); //	
-ParxLeft = GetSrcL(1);	
+ParxLeft = GetSrcL(-1); // good!!			
+tempScr = GetSrcL(0); // good!!	
+tempScr = GetSrcL(1); // good!!	
                     //   for (k=0;k<400;k++)
                     //      for (l=0;l<240;l++) PSetPixT(GetSrcR(0),k,l,rgb); //GetSrcR(0) works                      
 time = osGetTime() - time; 
-sprintf(str, "ParxLeft = GetSrcL(0&1); %i:ms ,kdl", time);
+sprintf(str, "ParxLeft = GetSrcL(-1&0&1); %i:ms ,kdl", time);
 CanvasString(ParxBot, str, 10,20, LIGHT_GREEN); 
 
 time= osGetTime();			
-SetSrcL(-1,ParxLeft);	// jumping in and out of sing & dub it 
+SetSrcR(0,tempScr);	// No Good 	
+//SetSrcL(-1,ParxLeft);	// No Good now?
 
 //ParxLeft = GetSrcL(-1);	// this stalls?	
                     //   for (k=0;k<400;k++)
                     //      for (l=0;l<240;l++) PSetPixT(GetSrcR(0),k,l,rgb); //GetSrcR(0) works                      
 time = osGetTime() - time; 
-sprintf(str, "ParxLeft = GetSrcL(-1);; %i:ms ,kdl", time);
+sprintf(str, "SetSrcR(0,tempScr); %i:ms ,kdl", time);
 //CanvasString(ParxBot, str, 10,30, LIGHT_GREEN); 
 			}
 

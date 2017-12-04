@@ -29,7 +29,7 @@ BEGIN
   v:= (y+x*240) {$ifdef MCRobot};  
   c:= gfxBottomFramebuffers[BuffIndex]^[v];
       {$endif MCRobot}{$ifdef Sweet16} * 2; 
-  c:= (gfxBottomFramebuffers[BuffIndex]^[v] shr 4) + gfxBottomFramebuffers[BuffIndex]^[v+1];
+  c:= (gfxBottomFramebuffers[BuffIndex]^[v] shl 4) + gfxBottomFramebuffers[BuffIndex]^[v+1];
       {$endif Sweet16}{$ifdef Triplet} * 3; 
   c.b:= gfxBottomFramebuffers[BuffIndex]^[v];
   c.g:= gfxBottomFramebuffers[BuffIndex]^[v+1];
@@ -173,29 +173,29 @@ begin
 end;
     
 //calls in InitBufSingle 
-//SetSrcL(-1,ParxLeft);	// jumping in and out of single & double it (glitchs &or freezes) feud if buffer aren't their
+//SetSrcL(-1,ParxLeft);	// did work before ?
 //
 procedure SetSrcL(index: integer; Val :{$i Rastarfar.inc});stdcall; [Public];
 begin
  if index <> -1  then 
- case index of
+ //    gfxTopLeftFramebuffers[index] := PTopMapLED(@Val) 
+case index of
   0 : {$i Rastarfar.inc}(ParxLeft0) := Val;
   1 : {$i Rastarfar.inc}(ParxLeft1) := Val; 
  end
 else
-//   LScr[index] := Val; 
    ParxLeft := Val;
 end;
 
 procedure SetSrcR(index: integer; Val :{$i Rastarfar.inc}); stdcall;[Public];
 begin
- if index <> -1  then 
+ if index <> -1  then  
+ //   gfxTopRightFramebuffers[index] := PTopMapLED(@Val) 
  case index of
   0 : {$i Rastarfar.inc}(ParxRight0) := Val;
   1 : {$i Rastarfar.inc}(ParxRight1) := Val; 
  end 
   else
- //  RScr[index] := Val; 
    ParxRight := Val;
 end;
 
@@ -209,18 +209,17 @@ begin
     gfxBottomFramebuffers[index] := PBotRawLinear(@Val);
   end else
   begin
-   BScr[index] := Val;
 {    ParxBot :=    {$ifdef MCRobot}PXBot {$endif MCRobot}
                   {$ifdef Sweet16}PRGB16Bot {$endif Sweet16}
     	          {$ifdef Triplet}PBGRBot {$endif Triplet}
     	          {$ifdef Quad}PRGBABot{$endif Quad}(Val)^;
  }   	          
-  //  ParxBot := PBotRawLinear(@Val);
+    ParxBot := PBotRawLinear(@Val);
   end 
 end;
     
 //call up the buffers -1 .. 1 for " ... & burst there double bubbles in 3D"
-procedure BufDubSub(index: integer);stdcall; 
+procedure BufSub(index: integer);stdcall; 
 begin
  if index <> -1  then 
    begin
@@ -229,24 +228,15 @@ begin
    gfxBottomFramebuffers[index] := PBotRawLinear(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil));
   end else
   begin
-   LScr[index] := {$ifdef MCRobot}PXTop {$endif MCRobot}
-                  {$ifdef Sweet16}PRGB16Top {$endif Sweet16}
-    	          {$ifdef Triplet}PBGRTop {$endif Triplet}
-	          {$ifdef Quad}PRGBATop{$endif Quad}(gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil))^; 
-   RScr[index] := {$ifdef MCRobot}PXTop {$endif MCRobot}
-                  {$ifdef Sweet16}PRGB16Top {$endif Sweet16}
-    	          {$ifdef Triplet}PBGRTop {$endif Triplet}
-	          {$ifdef Quad}PRGBATop{$endif Quad}(gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil))^; 
-   BScr[index] := {$ifdef MCRobot}PXBot {$endif MCRobot}
-                  {$ifdef Sweet16}PRGB16Bot {$endif Sweet16}
-    	          {$ifdef Triplet}PBGRBot {$endif Triplet}
-    	          {$ifdef Quad}PRGBABot{$endif Quad}(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil))^;
+   ParxLeft := {$i Blaster.inc}(gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil))^; 
+   ParxRight := {$i Blaster.inc}(gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil))^; 
+   ParxBot := PBotRawLinear(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil));
   end 
 end;  
 
 procedure BufDubClr(colour: {$i Propaganda.inc}; index: integer); stdcall;
 begin
-  BufDubSub(index);
+  BufSub(index);
   ClrAll(colour);
 end;
 
@@ -255,7 +245,7 @@ begin
   propriganda;
   gfxSetDoubleBuffering(GFX_TOP,false);
   gfxSetDoubleBuffering(GFX_BOTTOM,false);
-  BufDubSub(0);
+  BufDubClr(colour,0);
 end;
 
 procedure InitBufDub(colour: {$i Propaganda.inc}); stdcall;

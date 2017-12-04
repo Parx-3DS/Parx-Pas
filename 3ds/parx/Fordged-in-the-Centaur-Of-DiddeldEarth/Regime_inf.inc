@@ -39,8 +39,8 @@ procedure SetPixB(x: word; y: word;colour: {$i Propaganda.inc}); {$ifdef PascalP
     procedure propriganda;stdcall;
 
 //call up the buffers -1 .. 1 for " ... & burst there double bubbles in 3D" 
-    procedure BufDubSub(index: integer);stdcall;				
-    {$ifdef PascalPublic} public name 'BufDubSub';{$else}overload; {$endif PascalPublic}
+    procedure BufSub(index: integer);stdcall;				
+    {$ifdef PascalPublic} public name 'BufSub';{$else}overload; {$endif PascalPublic}
     
     procedure BufDubClr(colour: {$i Propaganda.inc}; index: integer);stdcall;	
     {$ifdef PascalPublic} public name 'BufDubClr';{$else}overload; {$endif PascalPublic}
@@ -68,8 +68,8 @@ procedure SetPixB(x: word; y: word;colour: {$i Propaganda.inc}); {$ifdef PascalP
 var
     ClExt: ColourExt;
 {.$endif PascalPublic}       
-    property LScr[x: integer]: {$undef Trap}{$i Rastarfar.inc} {$define Trap} read GetSrcL write SetSrcL;
-    property RScr[x: integer]: {$undef Trap}{$i Rastarfar.inc} {$define Trap} read GetSrcR write SetSrcR;
+    property LScr[x: integer]: {$i Rastarfar.inc} read GetSrcL write SetSrcL;
+    property RScr[x: integer]: {$i Rastarfar.inc} read GetSrcR write SetSrcR;
     property BScr[x: integer]:  {$ifdef MCRobot}XBot {$endif MCRobot}
     				{$ifdef Sweet16}RGB16Bot {$endif Sweet16}
     				{$ifdef Triplet}BGRBot {$endif Triplet}
