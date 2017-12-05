@@ -3,7 +3,7 @@ Any software works derive &or that make use of MUST include all files inclosed!
 # Parx-Pas (Lady Zürich -1.66)  
 ## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs &  
 ## Give me pascal passage from (the I? of BM &or PaySoft &or MircoPal) device context hell? 
-## Is Alpha & 24bit colour fully functional Get&Set L/R/B centric 3D video display driver, built & tested! 
+## Is fully functional Get&Set L/R/B centric 3D video display driver! 
  
 ## The, Southern Canadien Heritage Dictionary :defines: "Pioneer"  
 ### As a person who is among the first  
