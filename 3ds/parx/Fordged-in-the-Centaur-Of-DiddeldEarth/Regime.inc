@@ -1,4 +1,4 @@
-//Nintendo 2DS .. 3DS Pascal Development 
+//theories of Nintendo 2DS .. 3DS Pascal Vs. Pica200 relativity --> https://github.com/smealum/ctrulib
 //  
 //  illustrated in pascal resorting to Plan "B" long ago & still I'm short sums of money from none other than 
 //                a.) Oil & Gas Re: Television, media, communications &or radio their divsions 
@@ -7,7 +7,7 @@
 // copyrights 2017 PhD. Kenneth Dwayne Lee 
 //all rights reserved.
 
-//I'd like too spank "lets play, pick a hole" for every thing !!!  
+// Albert Einstein's theories --> https://en.wikipedia.org/wiki/Hendrik_Lorentz
 function GetPixL(x: word; y: word): {$i Propaganda.inc};stdcall; {$ifdef PascalPublic} Public name 'GetPixL';{$endif PascalPublic}
 BEGIN
   GetPixL:= {$i Propaganda.inc}(gfxTopLeftFramebuffers[BuffIndex]^[x,y]);
@@ -93,19 +93,7 @@ begin
  gfxSetScreenFormat(GFX_BOTTOM, {$ifdef MCRobot}GSP_BW_OES{$endif MCRobot} {$ifdef Sweet16}mode{$endif Sweet16}{$ifdef Triplet}GSP_BGR8_OES{$endif Triplet}{$ifdef Quad} GSP_RGBA8_OES{$endif Quad});
 end;
 
-//{.$i Rastarfar.inc}.
-{
-constructor Create;// $i Rastarfar.inc .
-begin
- inherited Create();
-end;
-
-Destructor Destroy;
-begin
- inherited Destroy();
-end;
-}
-
+//L3D, R3D & Bot --> https://www.youtube.com/watch?v=bMmhHBr7WDA
 procedure ClrAll(colour: {$i Propaganda.inc});stdcall;
 Var
   x,y: integer;
@@ -120,126 +108,23 @@ begin
                   Bot[x,y] := colour;
         end;
 end;
-
-var
-        ParxBot :  {$i BMapper.inc};cvar;external; 
-        ParxLeft : {$i Rastarfar.inc};cvar;external;
-        ParxRight :{$i Rastarfar.inc};cvar;external;
     
-//calls based in InitBufDub 
-//ParxLeft := GetSrcL(0) or GetSrcL(1); 
-Function GetSrcL(index: integer):{$i Rastarfar.inc};stdcall;[Public];
-begin
- if index <> -1  then 
- case index of
-  0 : Result := {$i Rastarfar.inc}(ParxLeft0);
-  1 : Result := {$i Rastarfar.inc}(ParxLeft1); 
- end
-    
-  { Result := {$ifdef MCRobot}PXTop {$endif MCRobot}
-             {$ifdef Sweet16}PRGB16Top {$endif Sweet16}
-    	     {$ifdef Triplet}PBGRTop {$endif Triplet}
-	     {$ifdef Quad}PRGBATop{$endif Quad}(gfxTopLeftFramebuffers[index])^ }
- else
-   Result := ParxLeft  
-end;
-
-Function GetSrcR(index: integer):{$i Rastarfar.inc};stdcall;[Public]; 
-begin
- if index <> -1  then 
- case index of
-  0 : Result := {$i Rastarfar.inc}(ParxRight0);
-  1 : Result := {$i Rastarfar.inc}(ParxRight1); 
- end else 
-   Result := ParxRight
-end;
-
-Function GetSrcB(index: integer):{$ifdef MCRobot}XBot {$endif MCRobot}
-    						    {$ifdef Sweet16}RGB16Bot {$endif Sweet16}
-    					            {$ifdef Triplet}BGRBot {$endif Triplet}
-						    {$ifdef Quad}RGBABot{$endif Quad}; stdcall;[Public];
-begin
- if index <> -1  then 
-   Result := {$ifdef MCRobot}PXBot {$endif MCRobot}
-             {$ifdef Sweet16}PRGB16Bot {$endif Sweet16}
-    	     {$ifdef Triplet}PBGRBot {$endif Triplet}
-	     {$ifdef Quad}PRGBABot{$endif Quad}(gfxBottomFramebuffers[index])^ 
-  // gfxBottomFramebuffers[index] := PBotRawLinear(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil));}
-   else
-   Result := {$ifdef MCRobot}PXBot {$endif MCRobot}
-             {$ifdef Sweet16}PRGB16Bot {$endif Sweet16}
-    	     {$ifdef Triplet}PBGRBot {$endif Triplet}
-    	     {$ifdef Quad}PRGBABot{$endif Quad}(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil))^;
-end;
-    
-//calls in InitBufSingle 
-//SetSrcL(-1,ParxLeft);	// did work before ?
-//
-procedure SetSrcL(index: integer; Val :{$i Rastarfar.inc});stdcall; [Public];
-begin
- if index <> -1  then 
- //    gfxTopLeftFramebuffers[index] := PTopMapLED(@Val) 
-case index of
-  0 : {$i Rastarfar.inc}(ParxLeft0) := Val;
-  1 : {$i Rastarfar.inc}(ParxLeft1) := Val; 
- end
-else
-   ParxLeft := Val;
-end;
-
-procedure SetSrcR(index: integer; Val :{$i Rastarfar.inc}); stdcall;[Public];
-begin
- if index <> -1  then  
- //   gfxTopRightFramebuffers[index] := PTopMapLED(@Val) 
- case index of
-  0 : {$i Rastarfar.inc}(ParxRight0) := Val;
-  1 : {$i Rastarfar.inc}(ParxRight1) := Val; 
- end 
-  else
-   ParxRight := Val;
-end;
-
-procedure SetSrcB(index: integer; Val :{$ifdef MCRobot}XBot {$endif MCRobot}
-    							  {$ifdef Sweet16}RGB16Bot {$endif Sweet16}
-    							  {$ifdef Triplet}BGRBot {$endif Triplet}
-						          {$ifdef Quad}RGBABot{$endif Quad});stdcall; [Public];
-begin
- if index <> -1  then 
-   begin
-    gfxBottomFramebuffers[index] := PBotRawLinear(@Val);
-  end else
-  begin
-{    ParxBot :=    {$ifdef MCRobot}PXBot {$endif MCRobot}
-                  {$ifdef Sweet16}PRGB16Bot {$endif Sweet16}
-    	          {$ifdef Triplet}PBGRBot {$endif Triplet}
-    	          {$ifdef Quad}PRGBABot{$endif Quad}(Val)^;
- }   	          
-    ParxBot := PBotRawLinear(@Val);
-  end 
-end;
-    
-//call up the buffers -1 .. 1 for " ... & burst there double bubbles in 3D"
+//call up the buffers & burst there double bubbles in 3D
 procedure BufSub(index: integer);stdcall; 
 begin
- if index <> -1  then 
-   begin
    gfxTopLeftFramebuffers[index] := PTopMapLED(gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil)); 
    gfxTopRightFramebuffers[index] := PTopMapLED(gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil));  
    gfxBottomFramebuffers[index] := PBotRawLinear(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil));
-  end else
-  begin
-   ParxLeft := {$i Blaster.inc}(gfxGetFramebuffer(GFX_TOP, GFX_LEFT, nil, nil))^; 
-   ParxRight := {$i Blaster.inc}(gfxGetFramebuffer(GFX_TOP, GFX_RIGHT, nil, nil))^; 
-   ParxBot := PBotRawLinear(gfxGetFramebuffer(GFX_BOTTOM, GFX_LEFT, nil, nil));
-  end 
 end;  
 
+//
 procedure BufDubClr(colour: {$i Propaganda.inc}; index: integer); stdcall;
 begin
   BufSub(index);
   ClrAll(colour);
 end;
 
+//
 procedure InitBufSingle(colour: {$i Propaganda.inc}); stdcall;
 begin
   propriganda;
@@ -248,6 +133,7 @@ begin
   BufDubClr(colour,0);
 end;
 
+//
 procedure InitBufDub(colour: {$i Propaganda.inc}); stdcall;
 begin
   propriganda;
