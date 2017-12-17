@@ -16,24 +16,7 @@ procedure SetPixR(x: word; y: word;colour: {$i Propaganda.inc}); {$ifdef PascalP
 procedure SetPixB(x: word; y: word;colour: {$i Propaganda.inc}); {$ifdef PascalPublic} public name 'SetPixB';{$else}overload; {$endif PascalPublic}
 
 
-//call up the buffers -1 .. 1 for " ... & burst there double bubbles in 3D"
-
-
-      
-    function GetSrcL(index: integer):{$undef Trap}{$i Rastarfar.inc} {$define Trap}; stdcall;{$ifdef PascalPublic} public name 'GetSrcL';{$else}overload; {$endif PascalPublic}
-    function GetSrcR(index: integer):{$undef Trap}{$i Rastarfar.inc} {$define Trap}; stdcall;{$ifdef PascalPublic} public name 'GetSrcR';{$else}overload; {$endif PascalPublic}
-    function GetSrcB(index: integer):	{$ifdef MCRobot}XBot {$endif MCRobot}
-    					{$ifdef Sweet16}RGB16Bot {$endif Sweet16}
-    					{$ifdef Triplet}BGRBot {$endif Triplet}
-					{$ifdef Quad}RGBABot{$endif Quad} ;          {$ifdef PascalPublic} public name 'GetSrcB';{$else}overload; {$endif PascalPublic} 
-					
-
-    procedure SetSrcL(index: integer; Val :{$undef Trap}{$i Rastarfar.inc} {$define Trap}); stdcall;{$ifdef PascalPublic} public name 'SetSrcL';{$else}overload; {$endif PascalPublic}
-    procedure SetSrcR(index: integer; Val :{$undef Trap}{$i Rastarfar.inc} {$define Trap}); stdcall;{$ifdef PascalPublic} public name 'SetSrcR';{$else}overload; {$endif PascalPublic}
-    procedure SetSrcB(index: integer; Val :{$ifdef MCRobot}XBot {$endif MCRobot}
-    					{$ifdef Sweet16}RGB16Bot {$endif Sweet16}
-    					{$ifdef Triplet}BGRBot {$endif Triplet}
-					{$ifdef Quad}RGBABot{$endif Quad} ); 		    stdcall;{$ifdef PascalPublic} public name 'SetSrcB';{$else}overload; {$endif PascalPublic}
+//call up the buffers & burst there double bubbles in 3D"
 					
     procedure ClrAll(colour: {$i Propaganda.inc});stdcall;   
     procedure propriganda;stdcall;
@@ -68,13 +51,8 @@ procedure SetPixB(x: word; y: word;colour: {$i Propaganda.inc}); {$ifdef PascalP
 var
     ClExt: ColourExt;
 {.$endif PascalPublic}       
-    property LScr[x: integer]: {$i Rastarfar.inc} read GetSrcL write SetSrcL;
-    property RScr[x: integer]: {$i Rastarfar.inc} read GetSrcR write SetSrcR;
-    property BScr[x: integer]:  {$ifdef MCRobot}XBot {$endif MCRobot}
-    				{$ifdef Sweet16}RGB16Bot {$endif Sweet16}
-    				{$ifdef Triplet}BGRBot {$endif Triplet}
-				{$ifdef Quad}RGBABot{$endif Quad} {BotRawLinear} read GetSrcB write SetSrcB;
-    
+
+//UCLA Berkeley, this is Pascal calling --> https://www.youtube.com/watch?v=xLy2SaSQAtA
     property L3D[x: word; y: word]: {$i Propaganda.inc} read GetPixL write SetPixL;
     property R3D[x: word; y: word]: {$i Propaganda.inc} read GetPixR write SetPixR;
     property Bot[x: word; y: word]: {$i Propaganda.inc} read GetPixB write SetPixB;
