@@ -1,11 +1,23 @@
-// Live from the 3DS Pascal banic in: (Kirk & alter ego Twin) Back on the transporter	     
+// Live from the 2DS .. 3DS Pascal banic in: (Kirk & alter ego Twin) Back on the transporter	     
 //
 // Copyright (c) 2015 .. 2017 Kenneth Dwayen Lee PhD.
 // all rights reserved on
 //
-// Nintendo 3DS BootStrap & ... any & all portions of "Pascal"  
-// WE Both YOU & I & maybe others are intent on PROFIT with & from any $ale$ in &or of the "Nintendo 2DS &or 3DS" 
-// It's rearing, developments & benifits from the "Pascal" computer language usage. 
+// Nintendo 3DS & 2DS any & all portions of "Pascal" concering Nintendo 3DS & 2DS 
+// WE Both YOU & I & maybe others are intent on PROFIT with & from any $ale$ in &or proceeds from!
+// the benifits obtained overall & should stand to profit in it's usage alone in rearing & developments? 
+//
+// again for You & Many others  
+//it's non participant others whom seem to cash it all in & leave nothing tobe desired, 
+//&or it lacks of the good intent afterwards, as with it's 
+//"Farday, reminiscent in nature &or a scafold that reachs too the profound" or was givin but 
+// now it's nears computer laws & forms theories of (Language vs. Pica200) & won over or just being mere threoy !  
+//
+//I've Asked U all to grab your seats & make your one &or votes illustrated.     
+
+// I definitly require a sum &or $um$, for computer languages "Pascal @ 2 votes" &or "Perl @ 2 votes"  
+// in or be it U are the JVM all mighty, fell from sky & reacking Javac a pone little people @ 2 votes 
+// &or LVM is your faith at the colony on road-apple7 @ 2 votes
  
 unit ParxPas;
 
