@@ -1,7 +1,7 @@
 Any software works derive &or that make use of MUST include all files inclosed!  
 
 # Parx-Pas (Lady Zürich -1.66)  
-## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs &  
+## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs & the all new lee/riel 3D drivers von Pascal   
 ## Give me pascal passage from (the I? of BM &or PaySoft &or MircoPal) device context hell? 
 ## Is fully functional Get&Set L/R/B centric 3D video display driver! 
  
@@ -16,10 +16,10 @@ Any software works derive &or that make use of MUST include all files inclosed!
 May I,  digress with: R&D Live on [Radio-Freedom](https://github.com/Three-DS/Radio-Freedom)  
 Is your 3DS Nintendo's "GDI - Canvas" in [C](https://github.com/smealum) & [Pascal](https://github.com/kennyd-lee/ctru-pas) three-way?   
 
-Get more info --> [Parx](https://www.facebook.com/Parx-1735214770048259) for is hire, some just dabble, proliteriots  [nabble](http://free-pascal-lazarus.989080.n3.nabble.com/Three-DS-Parx-GDI-it-s-big-enuff-for-a-quot-shoebox-quot-fits-more-in-quot-cupboard-quot-tc4047731.html)
+Get more info --> [Parx](https://www.facebook.com/BonBonPhD/) is [for hire](mailto:Parx3DS@aol.com), some just dabble, proliteriots  [nabble](http://free-pascal-lazarus.989080.n3.nabble.com/Three-DS-Parx-GDI-it-s-big-enuff-for-a-quot-shoebox-quot-fits-more-in-quot-cupboard-quot-tc4047731.html)
  
 ## AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS Nintendo", computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
-## In short I, require prior consent! in support of & we together enter in to a commercial product so please enjoy!    
+## In short I, require we together enter in to a commercial product so please enjoy!    
 
 
 &I'll retract these web search quries after some of these persons charged with assalt & etc...
