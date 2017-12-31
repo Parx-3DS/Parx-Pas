@@ -2,7 +2,7 @@ Any software works derive &or that make use of MUST include all files inclosed!
 
 # Parx-Pas (Lady Zürich -1.66)  
 ## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs  
-##& the all new [lee/riel 3D](mailto:pascal3ds@yahoo.com) extentions   
+# & the all new [lee/riel 3D](mailto:pascal3ds@yahoo.com) extentions   
 ## Give me passage from (the I? of BM &or PaySoft &or MircoPal) device context hell? 
 ## Is fully functional Get&Set L/R/B centric 3D video display driver! 
  
