@@ -35,7 +35,7 @@ on yahoo -->
 
 For tv 2 telephone no money U & 
 "feel monitarly intitled to crunchy & abridged, 
-was productive or some midway c/c++ &or wip projects for use with, again 2cuntfront the Pica200 graphics processor buy Law" some of the above links 
+was productive or some midway c/c++ &or wip projects for use with, again 2cuntfront (with any computer language vs. Pica200) &or any smother your 3D mother graphics processors &or cores buy Law with (given U FreePascal the whore as irrefutable proof) " some of the above links 
 &I'll retract these web search quries below after some of these persons charged with assult & etc...
   
 & last:what is use of a rental? would you like me to solicit every last shit-head  -->    
