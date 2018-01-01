@@ -21,8 +21,22 @@ Get more info --> [Parx](https://www.facebook.com/BonBonPhD/) is for hire, some 
 ## AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS Nintendo", computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ## In short I, require we together enter in to a commercial product so please enjoy!    
 
+on yahoo -->  
+[tcpip-proxy](https://ca.search.yahoo.com/search;_ylt=A0LEV2NMYKhUEg0AvuzrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANtSW9qNGMwcVJyeUtVWUNyOEtWbEpBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzExBHF1ZXJ5A3RjcGlwIHByb3h5BHRfc3RtcAMxNDIwMzIwODcy?p=tcpip+proxy&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
+[over the air usb hdtv tuner](https://ca.search.yahoo.com/search;_ylt=AwrBTvtnYKhU25AAigjrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANXRHNfNWRrZVE2R2F6eEVpNk9TMjFBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzE0BHF1ZXJ5A3VzYiBoZHR2IHR1bmVyBHRfc3RtcAMxNDIwMzIwODk3?p=usb+hdtv+tuner&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
+[voice over internet protocall](https://ca.search.yahoo.com/search;_ylt=AgF5dN_zXFHktO3MQZqz9mIt17V_?p=voip&toggle=1&cop=mss&ei=UTF-8&fr=yfp-t-715&fp=1)  
+[very small aperture satellite](https://ca.search.yahoo.com/search;_ylt=AgF5dN_zXFHktO3MQZqz9mIt17V_?p=vsat&toggle=1&cop=mss&ei=UTF-8&fr=yfp-t-715&fp=1)  
+  
+& on Bing -->  
+[tcpip-proxy](https://www.bing.ca/search?q=proxy+software)  
+[very small aperture satellite](https://www.bing.ca/search?q=vsat)  
+[voice over internet protocall](https://www.bing.ca/search?q=voip)  
+[over the air usb hdtv tuner](https://www.google.ca/search?q=usb+hdtv+tuners)  
 
-&I'll retract these web search quries after some of these persons charged with assalt & etc...
+For tv 2 telephone no money U & 
+"feel monitarly intitled to crunchy & abridged, 
+was productive or some midway c/c++ &or wip projects for use with, again 2cuntfront the Pica200 graphics processor buy Law" some of the above links 
+&I'll retract these web search quries below after some of these persons charged with assult & etc...
   
 & last:what is use of a rental? would you like me to solicit every last shit-head  -->    
 https://www.mern.gouv.qc.ca/territoire/droit/droit-tarification.jsp  
