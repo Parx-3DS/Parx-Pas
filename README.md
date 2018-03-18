@@ -10,7 +10,7 @@ Any software works derive &or that make use of MUST include all files inclosed!
 #### a. to explore or settle a new country or area.  
 #### b. research and develop a new area of knowledge or activity.  
 ### 1.  Eg. "the pioneers of the Wild West" :synonyms:	settler, colonist, colonizer, frontiers man/woman, explorer, trailblazer, bushwhacker  
-### 2.  Eg. "an aviation pioneer" :synonyms:	developer, innovator, instigate, groundbreaker, spearhead, institute, establish, found, founder, be the founding father/mother of, originate, set in motion, create, architect, creator  
+### 2.  Eg. "an aviation pioneer" :synonyms:	[developer](http://fpc-n3ds.net/), [innovator](http://fpc-n3ds.ca/parx), instigate, groundbreaker, spearhead, [institute](http://fpc-n3ds.org/), [establish](http://fpc-n3ds.com/), found, founder, [be the founding father/mother of](http://parx-gdi.fpc-n3ds.ca/), originate, set in motion, create, architect, creator  
 ### verb: pioneer; 3rd person present: pioneers; past tense: pioneered; past participle: pioneered; gerund or present participle: pioneering  
   
 May I,  digress with: R&D Live on [Radio-Freedom](https://github.com/Three-DS/Radio-Freedom)  
@@ -36,10 +36,5 @@ on yahoo -->
 For tv 2 telephone no money U & 
 "feel monitarly intitled to crunchy & abridged, 
 was productive or some midway c/c++ &or wip projects for use with, again 2cuntfront (with any computer language vs. Pica200) &or any smother your 3D mother graphics processors &or cores buy Law with (given U FreePascal the whore as irrefutable proof) " some of the above links 
-&I'll retract these web search quries below after some of these persons charged with assult & etc...
   
-& last:what is use of a rental? would you like me to solicit every last shit-head  -->    
-https://www.mern.gouv.qc.ca/territoire/droit/droit-tarification.jsp  
-http://www.ontario.ca/page/crown-land   
-
-end of notice!!
+& last: he FPC shoots, he 3DS scores & the 2DS Empire cries for --> http://fpc-n3ds.ca ?     
