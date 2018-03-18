@@ -10,7 +10,7 @@ Any software works derive &or that make use of MUST include all files inclosed!
 #### a. to explore or settle a new country or area.  
 #### b. research and develop a new area of knowledge or activity.  
 ### 1.  Eg. "the pioneers of the Wild West" :synonyms:	settler, colonist, colonizer, frontiers man/woman, explorer, trailblazer, bushwhacker  
-### 2.  Eg. "an aviation pioneer" :synonyms:	[developer](http://fpc-n3ds.net/), [innovator](http://fpc-n3ds.ca/parx), instigate, groundbreaker, spearhead, [institute](http://fpc-n3ds.org/), [establish](http://fpc-n3ds.com/), found, founder, [be the founding father/mother of](http://parx-gdi.fpc-n3ds.ca/), originate, set in motion, create, architect, creator  
+### 2.  Eg. "an aviation pioneer" :synonyms:	[developer](http://fpc-n3ds.net/), [innovator](http://fpc-n3ds.ca/parx), [instigate](http://facebook.fpc-n3ds.ca/), groundbreaker, spearhead, [institute](http://fpc-n3ds.org/), [establish](http://fpc-n3ds.com/), found, founder, [be the founding father/mother of](http://parx-gdi.fpc-n3ds.ca/), originate, [set in motion](http://twitter.fpc-n3ds.ca/), create, architect, creator  
 ### verb: pioneer; 3rd person present: pioneers; past tense: pioneered; past participle: pioneered; gerund or present participle: pioneering  
   
 May I,  digress with: R&D Live on [Radio-Freedom](https://github.com/Three-DS/Radio-Freedom)  
