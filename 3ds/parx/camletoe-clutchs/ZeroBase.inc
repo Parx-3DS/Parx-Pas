@@ -1,0 +1,1 @@
+{$ifdef Quad}3{$endif Quad}{$ifdef Triplet}2{$endif Triplet}{$ifdef Sweet16}1{$endif Sweet16}
