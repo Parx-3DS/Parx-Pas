@@ -1,10 +1,12 @@
-//the Pascal translation of libctru headers files for the 2DS & 3DS platform
+//the Pascal use of the Nintendo 2DS & 3DS platform
 //
-// Copyright (c) 2015, 2017 Kenny D. Lee
+// Copyright (c) 2013, 2015, 2017 Kenneth Dwayne Lee Bsc.
 // all rights reserved
-//
-// If the Box didn't have a bow; twats that never felt or what it is to sexlive, for whom & why ... prude reasons? 
-//!! poster sized is optional, Pix of before & after on the doors of any & all Christ's churches !!   
+//  
+// Apartied vagina, swim around in that same vagina doing "the I love U back stoke after, hey?"
+// 1, My statis, Indian Card 
+// 2. Trudeau too with draw his sad treaty with me & any other crowfoot or members of the first nations in Canada 
+
 
   type
      gfxScreen_t = (GFX_TOP := 0,GFX_BOTTOM := 1);
