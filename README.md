@@ -32,10 +32,6 @@ on yahoo -->
 [very small aperture satellite](https://www.bing.ca/search?q=vsat)  
 [voice over internet protocall](https://www.bing.ca/search?q=voip)  
 [over the air usb hdtv tuner](https://www.google.ca/search?q=usb+hdtv+tuners)  
-
-For tv 2 telephone no money U & 
-"feel monitarly intitled to crunchy & abridged, 
-was productive or some midway c/c++ &or wip projects for use with, again 2cuntfront (with any computer language vs. Pica200) &or any smother your 3D mother graphics processors &or cores buy Law with (given U FreePascal the whore as irrefutable proof) " some of the above links 
   
 & last: may the [Nintendo 3DS be with U](https://www.nintendo.com/en_CA/3ds/), 
 I've "asured the 2DS Empire a [decade of Pascal](http://fpc-n3ds.ca/freepascal)", friend?
