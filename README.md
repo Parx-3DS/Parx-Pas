@@ -1,9 +1,17 @@
+# too rich for your own good, you made things more expensive
+
+#Use of children as human shield & perforated (lesbian)? handled stepping stone since ?? 
+or "not even 5 min to explain there last rights with girl friend and booty call" but murdered for body parts as brag about on TV
+or industrious Leper & there con fooling with my favorite ambio   
+ ... Our demands from the governments are as follows  
+##1.) 1 dollar eveylast 2DS &or 3DS for both (Pascal & Perl) in use or not.  
+##2.) 250,000.00 copyright infringement of cartage titles developed & not dispensed via Nintendo Corp.   
+##3.) & In duplicated ... for any computer languages mounted &or ported to these devices.  
+
 Any software works derive &or that make use of MUST include all files inclosed!  
 
 # Parx-Pas (Lady Zürich -1.66)  
 ## Three-DS, Computers "Parx-3DS" GDI/Canvas public stubs  
-# & the all new [lee/riel 3D](mailto:pascal3ds@yahoo.com) extentions   
-#### Give me passage from (the I? of BM &or PaySoft &or MircoPal) device context hell? Is fully functional Get&Set L/R/B centric 3D video display driver! 
  
 ## The, Southern Canadien Heritage Dictionary :defines: "Pioneer"  
 ### As a person who is among the first  
@@ -20,18 +28,6 @@ Get more info --> [Parx](https://www.facebook.com/BonBonPhD/) is for hire, some 
  
 ## AS LEGAL PROOF OF MY GENERAL CLAIMS TO "the Pascal computer language used on 2DS & 3DS Nintendo", computer "DESK's", ! aka derived & skinning Eg. "bureau/réception/pupitre/caisse etc" &OR (IN GAMES FOR APPROACH AT NINTENDO CORP.) 
 ## In short I, require we together enter in to a commercial product so please enjoy!    
-
-on yahoo -->  
-[tcpip-proxy](https://ca.search.yahoo.com/search;_ylt=A0LEV2NMYKhUEg0AvuzrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANtSW9qNGMwcVJyeUtVWUNyOEtWbEpBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzExBHF1ZXJ5A3RjcGlwIHByb3h5BHRfc3RtcAMxNDIwMzIwODcy?p=tcpip+proxy&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
-[over the air usb hdtv tuner](https://ca.search.yahoo.com/search;_ylt=AwrBTvtnYKhU25AAigjrFAx.;_ylc=X1MDMjExNDcyMTAwMwRfcgMyBGZyA3lmcC10LTcxNQRncHJpZANXRHNfNWRrZVE2R2F6eEVpNk9TMjFBBG5fcnNsdAMwBG5fc3VnZwMxBG9yaWdpbgNjYS5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzE0BHF1ZXJ5A3VzYiBoZHR2IHR1bmVyBHRfc3RtcAMxNDIwMzIwODk3?p=usb+hdtv+tuner&fr2=sb-top-ca.search&fr=yfp-t-715&fp=1)  
-[voice over internet protocall](https://ca.search.yahoo.com/search;_ylt=AgF5dN_zXFHktO3MQZqz9mIt17V_?p=voip&toggle=1&cop=mss&ei=UTF-8&fr=yfp-t-715&fp=1)  
-[very small aperture satellite](https://ca.search.yahoo.com/search;_ylt=AgF5dN_zXFHktO3MQZqz9mIt17V_?p=vsat&toggle=1&cop=mss&ei=UTF-8&fr=yfp-t-715&fp=1)  
-  
-& on Bing -->  
-[tcpip-proxy](https://www.bing.ca/search?q=proxy+software)  
-[very small aperture satellite](https://www.bing.ca/search?q=vsat)  
-[voice over internet protocall](https://www.bing.ca/search?q=voip)  
-[over the air usb hdtv tuner](https://www.google.ca/search?q=usb+hdtv+tuners)  
   
 & last: may the [Nintendo 3DS be with U](https://www.nintendo.com/en_CA/3ds/), 
 I've "asured the 2DS Empire a [decade of Pascal](http://fpc-n3ds.ca/freepascal)", friend?
