@@ -1,12 +1,12 @@
 # too rich for your own good, you made things more expensive
 
-#Use of children as human shield & perforated (lesbian)? handled stepping stone since ?? 
+# Use of children as human shield & perforated (lesbian)? handled stepping stone since ?? 
 or "not even 5 min to explain there last rights with girl friend and booty call" but murdered for body parts as brag about on TV
 or industrious Leper & there con fooling with my favorite ambio   
  ... Our demands from the governments are as follows  
-##1.) 1 dollar eveylast 2DS &or 3DS for both (Pascal & Perl) in use or not.  
-##2.) 250,000.00 copyright infringement of cartage titles developed & not dispensed via Nintendo Corp.   
-##3.) & In duplicated ... for any computer languages mounted &or ported to these devices.  
+## 1.) 1 dollar eveylast 2DS &or 3DS for both (Pascal & Perl) in use or not.  
+## 2.) 250,000.00 copyright infringement of cartage titles developed & not dispensed via Nintendo Corp.   
+## 3.) & In duplicated ... for any computer languages mounted &or ported to these devices.  
 
 Any software works derive &or that make use of MUST include all files inclosed!  
 
